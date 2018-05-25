@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.13			]
+[name				= Gardena Smart Sileno V0.15			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -31,7 +31,7 @@
 
 [v#1 = 0]
 
-[v#100				= 0.14 ]
+[v#100				= 0.15 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -72,10 +72,10 @@ A12- cut_time:		cutting time (hours)
 A13- run_time:		running time (hours)
 
 Versions:
+V0.15	2018-05-25	SirSydom		added translation for status and error messages
 V0.14	2018-05-25	SirSydom
 
 Open Issues:
-A2 and A8: implement real texts
 Add Output - mowing (bool), charging (bool), 
 
 Author:
@@ -212,7 +212,7 @@ while (getSysInfo(1)>=1)
 			logic_setOutput($id,1,$mowername);
 			
 			$mowerstate = $gardena -> getMowerState($mower);
-			logic_setOutput($id,2,$mowerstate);	//ToDo: Translate
+			logic_setOutput($id,2,$gardena->status_map[$mowerstate]);
 			logic_setOutput($id,3,$mowerstate);
 			
 			$batterylevel = $gardena -> getPropertyData($mower, "battery", "level") -> value;
@@ -228,7 +228,7 @@ while (getSysInfo(1)>=1)
 			logic_setOutput($id,7,$last_time_online); //ToDo: Timezone
 			
 			$error = $gardena -> getPropertyData($mower, "mower", "error") -> value;
-			logic_setOutput($id,8,$error); //ToDo: Translate
+			logic_setOutput($id,8,$gardena->error_map[$error]);
 			logic_setOutput($id,9,$error);
 			
 			$charging_cycles = $gardena -> getPropertyData($mower, "mower_stats", "charging_cycles") -> value;
@@ -348,6 +348,76 @@ class gardena
     const ABILITY_SOIL_HUMIDITY = "humidity";
     const ABILITY_LIGHT = "light";
     const ABILITY_OUTLET = "outlet";
+	
+	var $status_map = array(
+		"paused" => "Pausiert",
+		"ok_cutting" => "Mähen",
+		"ok_searching" => "Suche Ladestation",
+		"ok_charging" => "Lädt",
+		"ok_leaving" => "Mähen",
+		"wait_updating" => "Wird aktualisiert ...",
+		"wait_power_up" => "Wird eingeschaltet ...",
+		"parked_timer" => "Geparkt nach Zeitplan",
+		"parked_park_selected" => "Geparkt",
+		"off_disabled" => "Der Mäher ist ausgeschaltet",
+		"off_hatch_open" => "Deaktiviert. Abdeckung ist offen oder PIN-Code erforderlich",
+		"unknown" => "Unbekannter Status",
+		"error" => "Fehler",
+		"error_at_power_up" => "Neustart ...",
+		"off_hatch_closed" => "Deaktiviert. Manueller Start erforderlich",
+		"ok_cutting_timer_overridden" => "Manuelles Mähen",
+		"parked_autotimer" => "Geparkt durch SensorControl",
+		"parked_daily_limit_reached" => "Abgeschlossen"
+	);
+	
+	var $error_map = array(
+		"no_message" => "Kein Fehler",
+		"outside_working_area" => "Außerhalb des Arbeitsbereichs",
+		"no_loop_signal" => "Kein Schleifensignal",
+		"wrong_loop_signal" => "Falsches Schleifensignal",
+		"loop_sensor_problem_front" => "Problem Schleifensensor, vorne",
+		"loop_sensor_problem_rear" => "Problem Schleifensensor, hinten",
+		"trapped" => "Eingeschlossen",
+		"upside_down" => "Steht auf dem Kopf",
+		"low_battery" => "Niedriger Batteriestand",
+		"empty_battery" => "empty_battery",
+		"no_drive" => "no_drive",
+		"lifted" => "Angehoben",
+		"stuck_in_charging_station" => "Eingeklemmt in Ladestation",
+		"charging_station_blocked" => "Ladestation blockiert",
+		"collision_sensor_problem_rear" => "Problem Stoßsensor hinten",
+		"collision_sensor_problem_front" => "Problem Stoßsensor vorne",
+		"wheel_motor_blocked_right" => "Radmotor rechts blockiert",
+		"wheel_motor_blocked_left" => "Radmotor links blockiert",
+		"wheel_drive_problem_right" => "Problem Antrieb, rechts",
+		"wheel_drive_problem_left" => "Problem Antrieb, links",
+		"cutting_system_blocked" => "Schneidsystem blockiert",
+		"invalid_sub_device_combination" => "Fehlerhafte Verbindung",
+		"settings_restored" => "Standardeinstellungen",
+		"electronic_problem" => "Elektronisches Problem",
+		"charging_system_problem" => "Problem Ladesystem",
+		"tilt_sensor_problem" => "Kippsensorproblem",
+		"wheel_motor_overloaded_right" => "Rechter Radmotor überlastet",
+		"wheel_motor_overloaded_left" => "Linker Radmotor überlastet",
+		"charging_current_too_high" => "Ladestrom zu hoch",
+		"temporary_problem" => "Vorübergehendes Problem",
+		"guide_1_not_found" => "SK 1 nicht gefunden",
+		"guide_2_not_found" => "SK 2 nicht gefunden",
+		"guide_3_not_found" => "SK 3 nicht gefunden",
+		"difficult_finding_home" => "Problem die Ladestation zu finden",
+		"guide_calibration_accomplished" => "Kalibration des Suchkabels beendet",
+		"guide_calibration_failed" => "Kalibration des Suchkabels fehlgeschlagen",
+		"temporary_battery_problem" => "Kurzzeitiges Batterieproblem",
+		"battery_problem" => "Batterieproblem",
+		"alarm_mower_switched_off" => "Alarm! Mäher ausgeschalten",
+		"alarm_mower_stopped" => "Alarm! Mäher gestoppt",
+		"alarm_mower_lifted" => "Alarm! Mäher angehoben",
+		"alarm_mower_tilted" => "Alarm! Mäher gekippt",
+		"connection_changed" => "Verbindung geändert",
+		"connection_not_changed" => "Verbindung nicht geändert",
+		"com_board_not_available" => "COM board nicht verfügbar",
+		"slipped" => "Rutscht"
+	);
     
     function gardena($user, $pw)
     {
