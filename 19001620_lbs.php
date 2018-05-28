@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.16			]
+[name				= Gardena Smart Sileno V0.17			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -35,7 +35,7 @@
 
 [v#1 = 0]
 
-[v#100				= 0.16 ]
+[v#100				= 0.17 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -81,6 +81,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.17	2018-05-28	SirSydom		minor changes to logging
 V0.16	2018-05-28	SirSydom		added error handling to reduce error logs, added A15-18 for extended state information
 V0.15	2018-05-25	SirSydom		added translation for status and error messages
 V0.14	2018-05-25	SirSydom
@@ -206,7 +207,7 @@ while (getSysInfo(1)>=1)
 			
 			if($mower == NULL)
 			{
-				logging($id, "$mower is NULL", null, 1);
+				logging($id, "mower is NULL", null, 1);
 				$cyclecounter = $E[11]['value'] * 2;
 			}
 			else
@@ -242,7 +243,7 @@ while (getSysInfo(1)>=1)
 					$gardena = new gardena($username, $password);
 					if($gardena == NULL)
 					{
-						logging($id, "$gardena is NULL", null, 1);
+						logging($id, "gardena is NULL", null, 1);
 					}
 					else
 					{
@@ -252,7 +253,7 @@ while (getSysInfo(1)>=1)
 					
 					if($mower == NULL)
 					{
-						logging($id, "$mower is NULL", null, 1);
+						logging($id, "mower is NULL", null, 1);
 						$cyclecounter = $E[11]['value'] * 2;
 						$mower_is_valid = false;
 					}
