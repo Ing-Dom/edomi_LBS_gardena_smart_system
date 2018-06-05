@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.17			]
+[name				= Gardena Smart Sileno V0.19			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -34,8 +34,15 @@
 [a#18				= state_num								]
 
 [v#1 = 0]
+[v#5 = 0]
+[v#10 = 0]
+[v#11 = 0]
+[v#12 = 0]
+[v#13 = 0]
+[v#14 = 0]
 
-[v#100				= 0.17 ]
+
+[v#100				= 0.19 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -65,9 +72,9 @@ A1 - mower_name:	The name of the mower as configured in the gardena app
 A2 - state_text:	The current state of the mower as human readable text
 A3 - state_orig:	The current state of the mower as keyword
 A4 - battery_level:	The battery level in percent (0-100)
-A5 - next_start:	Next scheduled start of the mower - 0 when no start is planned.
+A5 - next_start:	Next scheduled start of the mower - 0 when no start is planned (be aware time is in UTC. See also LBS19000153)
 A6 - signal:		Signal strengt for the radio connection between mower and smart gateway
-A7 - last_connect:	Time of last connection between gardena cloud and mower
+A7 - last_connect:	Time of last connection between gardena cloud and mower (be aware time is in UTC. See also LBS19000153)
 A8 - error_text:	The current error state of the mower as human readable text
 A9 - error_orig:	The current error state of the mower as keyword
 A10- charge_cycles:	The total number of charging cycles
@@ -81,6 +88,8 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.19	2018-06-05	SirSydom		changed edge detection in LB_LBSID to prevent error messages, supressed error messaged in gardena class
+V0.18	2018-05-30	SirSydom		Inputs in LBS not EXEC  /// ToDo:  error handling, frequency after cmd
 V0.17	2018-05-28	SirSydom		minor changes to logging
 V0.16	2018-05-28	SirSydom		added error handling to reduce error logs, added A15-18 for extended state information
 V0.15	2018-05-25	SirSydom		added translation for status and error messages
@@ -123,6 +132,39 @@ function LB_LBSID($id)
 			setLogicElementVar($id,1,1);                      //setzt V1=1, um einen mehrfachen Start des EXEC-Scripts zu verhindern
 			callLogicFunctionExec(LBSID,$id);                 //EXEC-Script starten (garantiert nur einmalig)
 		}
+		
+		if($E[5]['value'] == 1 && $E[5]['refresh'] == 1 && getLogicElementVar($id,10) != 1)	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 1);
+		}
+		setLogicElementVar($id, 10, $E[5]['value']);
+		
+		if($E[6]['value'] == 1 && $E[6]['refresh'] == 1 && getLogicElementVar($id,11) != 1)	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 2);
+		}		
+		setLogicElementVar($id, 11, $E[6]['value']);
+		
+		if($E[7]['value'] == 1 && $E[7]['refresh'] == 1 && getLogicElementVar($id,12) != 1)	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 3);
+		}		
+		setLogicElementVar($id, 12, $E[7]['value']);
+		
+		if($E[8]['value'] == 1 && $E[8]['refresh'] == 1 && getLogicElementVar($id,13) != 1)	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 4);
+		}		
+		setLogicElementVar($id, 13, $E[8]['value']);
+		
+		if($E[9]['value'] == 1 && $E[9]['refresh'] == 1 && getLogicElementVar($id,14) != 1)	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 5);
+		}		
+		setLogicElementVar($id, 14, $E[9]['value']);
+
+
+		
 	}
 }
 
@@ -143,38 +185,8 @@ $cyclecounter = $E[11]['value'] * 2; // start with max value, so a cycle is immi
 while (getSysInfo(1)>=1)
 {
 	$E = logic_getInputs($id);
-	$cmd = 0;
-	
-	if($E[5]['value'] == 1 && $park1 != 1)	// only act on rising edge
-	{
-		$cmd = 1;
-	}		
-	$park1 = $E[5]['value'];
-	
-	if($E[6]['value'] == 1 && $park2 != 1)	// only act on rising edge
-	{
-		$cmd = 2;
-	}		
-	$park2 = $E[6]['value'];
-	
-	if($E[7]['value'] == 1 && $trigger_start != 1)	// only act on rising edge
-	{
-		$cmd = 3;
-	}		
-	$trigger_start = $E[7]['value'];
-	
-	if($E[8]['value'] == 1 && $trigger_start24h != 1)	// only act on rising edge
-	{
-		$cmd = 4;
-	}		
-	$trigger_start24h = $E[8]['value'];
-	
-	if($E[9]['value'] == 1 && $trigger_start3d != 1)	// only act on rising edge
-	{
-		$cmd = 5;
-	}		
-	$trigger_start3d = $E[9]['value'];
-	
+	$cmd = getLogicElementVar($id,5);	
+	setLogicElementVar($id, 5, 0);
 	
 	if(($cyclecounter < ($E[11]['value'])*2) && $cmd == 0)
 	{
@@ -193,7 +205,9 @@ while (getSysInfo(1)>=1)
 			$password = $E[3]['value'];
 			$mower_num = $E[4]['value'];
 			
+			error_off();
 			$gardena = new gardena($username, $password);
+			error_on();
 			logging($id, "new gardena", null, 8);
 			if($gardena == NULL)
 			{
@@ -201,7 +215,9 @@ while (getSysInfo(1)>=1)
 			}
 			else
 			{
+				error_off();
 				$mower = $gardena -> getDeviceOfCategory($gardena::CATEGORY_MOWER, $mower_num);
+				error_on();
 				logging($id, "getDeviceOfCategory", null, 8);
 			}
 			
@@ -240,14 +256,18 @@ while (getSysInfo(1)>=1)
 				if($cmd > 0)
 				{
 					logging($id, "get mower after command", null, 5);
+					error_off();
 					$gardena = new gardena($username, $password);
+					error_on();
 					if($gardena == NULL)
 					{
 						logging($id, "gardena is NULL", null, 1);
 					}
 					else
 					{
+						error_off();
 						$mower = $gardena -> getDeviceOfCategory($gardena::CATEGORY_MOWER, $mower_num);
+						error_on();
 						logging($id, "getDeviceOfCategory", null, 8);
 					}
 					
