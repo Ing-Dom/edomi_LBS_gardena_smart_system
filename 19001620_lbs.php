@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.20			]
+[name				= Gardena Smart Sileno V0.21			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -42,7 +42,7 @@
 [v#14 = 0]
 
 
-[v#100				= 0.20 ]
+[v#100				= 0.21 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -90,6 +90,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.21	2019-04-08	SirSydom		extended logging to find problems with latest edomi or gardena cloud
 V0.20	2018-06-12	SirSydom		set cycletime to 1s 20x after a cmd was issued, changed behaviour of A18
 V0.19	2018-06-05	SirSydom		changed edge detection in LB_LBSID to prevent error messages, supressed error messaged in gardena class
 V0.18	2018-05-30	SirSydom		Inputs in LBS not EXEC
@@ -103,10 +104,10 @@ Timezone-Handling
 
 Author:
 SirSydom - com@sirsydom.de
-Copyright (c) 2018 SirSydom
+Copyright (c) 2018-2019 SirSydom
 
 Github:
-https://github.com/SirSydom/edomi_LBS_gardena_smart_system Label 19001620_V0_20
+https://github.com/SirSydom/edomi_LBS_gardena_smart_system
 
 Links:
 https://knx-user-forum.de/forum/projektforen/edomi/1233746-lbs-f%C3%BCr-gardena-smart-sileno-smart-system
@@ -189,12 +190,14 @@ $reduce_cycletime = 0;
 $A18 = null;
 while (getSysInfo(1)>=1)
 {
+	logging($id, "main while cycle", null, 8);
 	$E = logic_getInputs($id);
 	$cmd = getLogicElementVar($id,5);	
 	setLogicElementVar($id, 5, 0);
 	
 	if(($cyclecounter < ($E[11]['value'])*2) && $cmd == 0)
 	{
+		logging($id, "wait 500ms", null, 8);
 		usleep(500000);
 		$cyclecounter++;
 	}
@@ -202,11 +205,13 @@ while (getSysInfo(1)>=1)
 	{
 		if($reduce_cycletime > 0)
 		{
+			logging($id, "reduced cycltime active", null, 8);
 			$reduce_cycletime--;
 			$cyclecounter = $E[11]['value'] * 2 - 2;
 		}
 		else
 		{
+			logging($id, "set cyclecounter to 0", null, 8);
 			$cyclecounter = 0;
 		}
 		
@@ -218,20 +223,22 @@ while (getSysInfo(1)>=1)
 			$password = $E[3]['value'];
 			$mower_num = $E[4]['value'];
 			
+			logging($id, "new gardena start", null, 8);
 			error_off();
 			$gardena = new gardena($username, $password);
 			error_on();
-			logging($id, "new gardena", null, 8);
+			logging($id, "new gardena end", null, 8);
 			if($gardena == NULL)
 			{
 				logging($id, "$gardena is NULL", null, 1);
 			}
 			else
 			{
+				logging($id, "getDeviceOfCategory start", null, 8);
 				error_off();
 				$mower = $gardena -> getDeviceOfCategory($gardena::CATEGORY_MOWER, $mower_num);
 				error_on();
-				logging($id, "getDeviceOfCategory", null, 8);
+				logging($id, "getDeviceOfCategory end", null, 8);
 			}
 			
 			if($mower == NULL)
@@ -267,6 +274,7 @@ while (getSysInfo(1)>=1)
 				
 				if($cmd > 0)
 				{
+					logging($id, "reduce cycltime after command", null, 8);
 					$reduce_cycletime = 20; //reduce cyclimetime to 1s for 20times
 					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
 				}
