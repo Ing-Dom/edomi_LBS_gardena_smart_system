@@ -283,14 +283,14 @@ while (getSysInfo(1)>=1)
 				if($gardena->Check($mower))
 				{
 					logging($id, "check true", null, 7);
-					logging($id, "$gardena debug", $gardena, 8);
-					logging($id, "$mower debug", $mower, 8);
+					logging2($id, "gardena debug", $gardena, 8);
+					logging2($id, "mower debug", $mower, 8);
 				}
 				else
 				{
 					logging($id, "check false", null, 3);
-					logging($id, "$gardena debug", $gardena, 7);
-					logging($id, "$mower debug", $mower, 7);
+					logging2($id, "gardena debug", $gardena, 7);
+					logging2($id, "mower debug", $mower, 7);
 				}
 				
 
@@ -406,6 +406,31 @@ function logging($id,$msg, $var=NULL, $priority=8)
 			foreach ($var as $index => $line)
 				writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t".$index." => ".$line);
 			writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t================ ARRAY/OBJECT END ================");
+		}
+	}
+}
+
+function logging2($id,$msg, $var=NULL, $priority=8)
+{
+	$E=getLogicEingangDataAll($id);
+	$logLevel = getLogicElementVar($id,103);
+	if (is_int($priority) && $priority<=$logLevel && $priority>0)
+	{
+		$logLevelNames = array('none','emerg','alert','crit','err','warning','notice','info','debug');
+		$version = getLogicElementVar($id,100);
+		$lbsNo = getLogicElementVar($id,101);
+		$logName = getLogicElementVar($id,102) . ' --- LBS'.$lbsNo;
+		strpos($_SERVER['SCRIPT_NAME'],$lbsNo) ? $scriptname='EXE'.$lbsNo : $scriptname = 'LBS'.$lbsNo;
+		writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t".$msg);
+		
+		if ($var!=NULL)
+		{
+			writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t================ VAR_EXPORT START ================");
+			$mydumpdata = var_export($var, true);
+			$mydumpdata_array = explode("\n", $mydumpdata);
+			foreach ($mydumpdata_array as $index => $line)
+				writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t".$line);
+			writeToCustomLog($logName,str_pad($logLevelNames[$logLevel],7), $scriptname." [v$version]:\t================ VAR_EXPORT END ================");
 		}
 	}
 }
