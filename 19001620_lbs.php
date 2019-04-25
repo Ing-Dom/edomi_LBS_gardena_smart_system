@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.21			]
+[name				= Gardena Smart Sileno V0.22			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -42,7 +42,7 @@
 [v#14 = 0]
 
 
-[v#100				= 0.21 ]
+[v#100				= 0.22 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -90,6 +90,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.22	2019-04-25	SirSydom		find problems with latest edomi or gardena cloud
 V0.21	2019-04-08	SirSydom		extended logging to find problems with latest edomi or gardena cloud
 V0.20	2018-06-12	SirSydom		set cycletime to 1s 20x after a cmd was issued, changed behaviour of A18
 V0.19	2018-06-05	SirSydom		changed edge detection in LB_LBSID to prevent error messages, supressed error messaged in gardena class
@@ -205,17 +206,17 @@ while (getSysInfo(1)>=1)
 	{
 		if($reduce_cycletime > 0)
 		{
-			logging($id, "reduced cycltime active", null, 8);
+			logging($id, "reduced cycltime active", null, 7);
 			$reduce_cycletime--;
 			$cyclecounter = $E[11]['value'] * 2 - 2;
 		}
 		else
 		{
-			logging($id, "set cyclecounter to 0", null, 8);
+			logging($id, "set cyclecounter to 0", null, 7);
 			$cyclecounter = 0;
 		}
 		
-		logging($id, "Gardena Smart System Cycle started", null, 8);
+		logging($id, "Gardena Smart System Cycle started", null, 7);
 
 		if ($E)
 		{
@@ -223,22 +224,22 @@ while (getSysInfo(1)>=1)
 			$password = $E[3]['value'];
 			$mower_num = $E[4]['value'];
 			
-			logging($id, "new gardena start", null, 8);
+			logging($id, "new gardena start", null, 7);
 			error_off();
 			$gardena = new gardena($username, $password);
 			error_on();
-			logging($id, "new gardena end", null, 8);
+			logging($id, "new gardena end", null, 7);
 			if($gardena == NULL)
 			{
 				logging($id, "$gardena is NULL", null, 1);
 			}
 			else
 			{
-				logging($id, "getDeviceOfCategory start", null, 8);
+				logging($id, "getDeviceOfCategory start", null, 7);
 				error_off();
 				$mower = $gardena -> getDeviceOfCategory($gardena::CATEGORY_MOWER, $mower_num);
 				error_on();
-				logging($id, "getDeviceOfCategory end", null, 8);
+				logging($id, "getDeviceOfCategory end", null, 7);
 			}
 			
 			if($mower == NULL)
@@ -274,9 +275,22 @@ while (getSysInfo(1)>=1)
 				
 				if($cmd > 0)
 				{
-					logging($id, "reduce cycltime after command", null, 8);
+					logging($id, "reduce cycltime after command", null, 7);
 					$reduce_cycletime = 20; //reduce cyclimetime to 1s for 20times
 					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
+				}
+				
+				if($gardena->Check($mower))
+				{
+					logging($id, "check true", null, 7);
+					logging($id, "$gardena debug", $gardena, 8);
+					logging($id, "$mower debug", $mower, 8);
+				}
+				else
+				{
+					logging($id, "check false", null, 3);
+					logging($id, "$gardena debug", $gardena, 7);
+					logging($id, "$mower debug", $mower, 7);
 				}
 				
 
@@ -347,7 +361,7 @@ while (getSysInfo(1)>=1)
 			echo "mower_stats running_time: #". $gardena -> getPropertyData($mower, "mower_stats", "running_time") -> value ."#\n<br>\n<br>";
 			*/	
 			
-			logging($id, "Gardena Smart System Cycle exit", null, 8);
+			logging($id, "Gardena Smart System Cycle exit", null, 7);
 		}
 	}
 }
@@ -699,6 +713,15 @@ class gardena
             if ($property -> name == $propertyName)
                 return $property;
     }
+	
+	function Check($device)
+	{
+		$my_dbg_data = NULL;
+		$my_dbg_data = $this->getPropertyData($device, $this::CATEGORY_MOWER, $this::PROPERTY_STATUS);
+		
+		return is_object($my_dbg_data);
+	}
+		
     
     /**
     * Note "quality 80" seems to be quite the highest possible value (measured with external antenna and 2-3 meters distance)
