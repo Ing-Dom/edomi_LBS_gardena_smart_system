@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.22			]
+[name				= Gardena Smart Sileno V0.23			]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -42,7 +42,7 @@
 [v#14 = 0]
 
 
-[v#100				= 0.22 ]
+[v#100				= 0.23 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -90,6 +90,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.23	2019-04-26	SirSydom		added check for missing ability data
 V0.22	2019-04-25	SirSydom		find problems with latest edomi or gardena cloud
 V0.21	2019-04-08	SirSydom		extended logging to find problems with latest edomi or gardena cloud
 V0.20	2018-06-12	SirSydom		set cycletime to 1s 20x after a cmd was issued, changed behaviour of A18
@@ -280,86 +281,69 @@ while (getSysInfo(1)>=1)
 					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
 				}
 				
-				if($gardena->Check($mower))
+				if($gardena->CheckDevice($mower))
 				{
-					logging($id, "check true", null, 7);
+					logging($id, "check ok", null, 7);
 					logging2($id, "gardena debug", $gardena, 8);
 					logging2($id, "mower debug", $mower, 8);
+					
+					$mowername = $gardena -> getMowerName($mower);	
+					logic_setOutput($id,1,$mowername);
+					
+					$mowerstate = $gardena -> getMowerState($mower);
+					logic_setOutput($id,2,$gardena->status_map[$mowerstate]);
+					logic_setOutput($id,3,$mowerstate);
+					logic_setOutput($id,15,$gardena->status_map_int[$mowerstate] == 10 ? 1 : 0);
+					logic_setOutput($id,16,$gardena->status_map_int[$mowerstate] == 5 ? 1 : 0);
+					logic_setOutput($id,17,$gardena->status_map_int[$mowerstate] == 2 ? 1 : 0);
+					
+					if($A18 != $gardena->status_map_int[$mowerstate])
+					{
+						if($A18 != null)
+							logic_setOutput($id,18,$A18);
+						
+						logic_setOutput($id,18,$gardena->status_map_int[$mowerstate]);
+						$A18 = $gardena->status_map_int[$mowerstate];
+					}
+					
+					
+					$batterylevel = $gardena -> getPropertyData($mower, "battery", "level") -> value;
+					logic_setOutput($id,4,$batterylevel);
+					
+					$next_start = $gardena -> getPropertyData($mower, "mower", "timestamp_next_start") -> value;
+					logic_setOutput($id,5,$next_start); //ToDo: Timezone
+					
+					$signal = $gardena -> getPropertyData($mower, "radio", "quality") -> value;
+					logic_setOutput($id,6,$signal);
+					
+					$last_time_online = $gardena -> getPropertyData($mower, "device_info", "last_time_online") -> value;
+					logic_setOutput($id,7,$last_time_online); //ToDo: Timezone
+					
+					$error = $gardena -> getPropertyData($mower, "mower", "error") -> value;
+					logic_setOutput($id,8,$gardena->error_map[$error]);
+					logic_setOutput($id,9,$error);
+					
+					$charging_cycles = $gardena -> getPropertyData($mower, "mower_stats", "charging_cycles") -> value;
+					logic_setOutput($id,10,$charging_cycles);
+					
+					$collisions = $gardena -> getPropertyData($mower, "mower_stats", "collisions") -> value;
+					logic_setOutput($id,11,$collisions);
+					
+					$cutting_time = $gardena -> getPropertyData($mower, "mower_stats", "cutting_time") -> value;
+					logic_setOutput($id,12,$cutting_time);
+					
+					$running_time = $gardena -> getPropertyData($mower, "mower_stats", "running_time") -> value;
+					logic_setOutput($id,13,$running_time);
 				}
 				else
 				{
-					logging($id, "check false", null, 3);
+					logging($id, "check failed", null, 3);
 					logging2($id, "gardena debug", $gardena, 7);
 					logging2($id, "mower debug", $mower, 7);
-				}
-				
-
-				$mowername = $gardena -> getMowerName($mower);	
-				logic_setOutput($id,1,$mowername);
-				
-				$mowerstate = $gardena -> getMowerState($mower);
-				logic_setOutput($id,2,$gardena->status_map[$mowerstate]);
-				logic_setOutput($id,3,$mowerstate);
-				logic_setOutput($id,15,$gardena->status_map_int[$mowerstate] == 10 ? 1 : 0);
-				logic_setOutput($id,16,$gardena->status_map_int[$mowerstate] == 5 ? 1 : 0);
-				logic_setOutput($id,17,$gardena->status_map_int[$mowerstate] == 2 ? 1 : 0);
-				
-				if($A18 != $gardena->status_map_int[$mowerstate])
-				{
-					if($A18 != null)
-						logic_setOutput($id,18,$A18);
 					
-					logic_setOutput($id,18,$gardena->status_map_int[$mowerstate]);
-					$A18 = $gardena->status_map_int[$mowerstate];
-				}
-				
-				
-				$batterylevel = $gardena -> getPropertyData($mower, "battery", "level") -> value;
-				logic_setOutput($id,4,$batterylevel);
-				
-				$next_start = $gardena -> getPropertyData($mower, "mower", "timestamp_next_start") -> value;
-				logic_setOutput($id,5,$next_start); //ToDo: Timezone
-				
-				$signal = $gardena -> getPropertyData($mower, "radio", "quality") -> value;
-				logic_setOutput($id,6,$signal);
-				
-				$last_time_online = $gardena -> getPropertyData($mower, "device_info", "last_time_online") -> value;
-				logic_setOutput($id,7,$last_time_online); //ToDo: Timezone
-				
-				$error = $gardena -> getPropertyData($mower, "mower", "error") -> value;
-				logic_setOutput($id,8,$gardena->error_map[$error]);
-				logic_setOutput($id,9,$error);
-				
-				$charging_cycles = $gardena -> getPropertyData($mower, "mower_stats", "charging_cycles") -> value;
-				logic_setOutput($id,10,$charging_cycles);
-				
-				$collisions = $gardena -> getPropertyData($mower, "mower_stats", "collisions") -> value;
-				logic_setOutput($id,11,$collisions);
-				
-				$cutting_time = $gardena -> getPropertyData($mower, "mower_stats", "cutting_time") -> value;
-				logic_setOutput($id,12,$cutting_time);
-				
-				$running_time = $gardena -> getPropertyData($mower, "mower_stats", "running_time") -> value;
-				logic_setOutput($id,13,$running_time);
-					
-					
-					
-					
+					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
+				}	
 			}
-				
-				
-				
-			/*
-			echo "battery level: #". $gardena -> getPropertyData($mower, "battery", "level") -> value ."#\n<br>\n<br>";
-			echo "mower timestamp_next_start: #". $gardena -> getPropertyData($mower, "mower", "timestamp_next_start") -> value ."#\n<br>\n<br>";
-			echo "radio quality: #". $gardena -> getPropertyData($mower, "radio", "quality") -> value ."#\n<br>\n<br>";
-			echo "device_info last_time_online: #". $gardena -> getPropertyData($mower, "device_info", "last_time_online") -> value ."#\n<br>\n<br>";
-			echo "mower error: #". $gardena -> getPropertyData($mower, "mower", "error") -> value ."#\n<br>\n<br>";
-			echo "mower_stats charging_cycles: #". $gardena -> getPropertyData($mower, "mower_stats", "charging_cycles") -> value ."#\n<br>\n<br>";
-			echo "mower_stats collisions: #". $gardena -> getPropertyData($mower, "mower_stats", "collisions") -> value ."#\n<br>\n<br>";
-			echo "mower_stats cutting_time: #". $gardena -> getPropertyData($mower, "mower_stats", "cutting_time") -> value ."#\n<br>\n<br>";
-			echo "mower_stats running_time: #". $gardena -> getPropertyData($mower, "mower_stats", "running_time") -> value ."#\n<br>\n<br>";
-			*/	
 			
 			logging($id, "Gardena Smart System Cycle exit", null, 7);
 		}
@@ -739,7 +723,7 @@ class gardena
                 return $property;
     }
 	
-	function Check($device)
+	function CheckDevice($device)
 	{
 		$my_dbg_data = NULL;
 		$my_dbg_data = $this->getPropertyData($device, $this::CATEGORY_MOWER, $this::PROPERTY_STATUS);
