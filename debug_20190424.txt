@@ -1,0 +1,127 @@
+<tr><td>2019-04-24 09:39:37</td><td>835773</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:37</td><td>837696</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:38</td><td>338819</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:38</td><td>340662</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:38</td><td>841834</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:38</td><td>842443</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   set cyclecounter to 0</td></tr>                                                                            
+<tr><td>2019-04-24 09:39:38</td><td>842675</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   Gardena Smart System Cycle started</td></tr>                                                               
+<tr><td>2019-04-24 09:39:38</td><td>842897</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   new gardena start</td></tr>                                                                                
+<tr><td>2019-04-24 09:39:49</td><td>115196</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   new gardena end</td></tr>                                                                                  
+<tr><td>2019-04-24 09:39:49</td><td>116101</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   getDeviceOfCategory start</td></tr>                                                                        
+<tr><td>2019-04-24 09:39:49</td><td>117316</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   getDeviceOfCategory end</td></tr>                                                                          
+<tr><td>2019-04-24 09:39:49</td><td>180493</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   Gardena Smart System Cycle exit</td></tr>                                                                  
+<tr><td>2019-04-24 09:39:49</td><td>181957</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:49</td><td>183911</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:49</td><td>686187</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:49</td><td>688112</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:50</td><td>190521</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:50</td><td>192440</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:50</td><td>694602</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:50</td><td>696747</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:51</td><td>199112</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:39:51</td><td>201073</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:39:51</td><td>703268</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>          
+
+
+
+<tr><td>2019-04-24 09:41:03</td><td>061753</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:03</td><td>063740</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:41:03</td><td>566096</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:03</td><td>568078</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   set cyclecounter to 0</td></tr>                                                                            
+<tr><td>2019-04-24 09:41:03</td><td>568892</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   Gardena Smart System Cycle started</td></tr>                                                               
+<tr><td>2019-04-24 09:41:03</td><td>569642</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   new gardena start</td></tr>                                                                                
+<tr><td>2019-04-24 09:41:14</td><td>599777</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   new gardena end</td></tr>                                                                                  
+<tr><td>2019-04-24 09:41:14</td><td>600624</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   getDeviceOfCategory start</td></tr>                                                                        
+<tr><td>2019-04-24 09:41:14</td><td>601748</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   getDeviceOfCategory end</td></tr>                                                                          
+<tr><td>2019-04-24 09:41:14</td><td>630207</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   Gardena Smart System Cycle exit</td></tr>                                                                  
+<tr><td>2019-04-24 09:41:14</td><td>631302</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:14</td><td>633804</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:41:15</td><td>136162</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:15</td><td>138102</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:41:15</td><td>640477</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:15</td><td>642435</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:41:16</td><td>143548</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+<tr><td>2019-04-24 09:41:16</td><td>145360</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   wait 500ms</td></tr>                                                                                       
+<tr><td>2019-04-24 09:41:16</td><td>647870</td><td>26843</td><td>debug  </td><td>EXE19001620 [v0.21]:   main while cycle</td></tr>                                                                                 
+
+
+
+019-04-24 09:39:49	144257	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	162550	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	162744	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 487 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	162878	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 106 | Undefined index:	ERROR
+2019-04-24 09:39:49	164789	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 108 | Undefined index:	ERROR
+2019-04-24 09:39:49	165405	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 109 | Undefined index:	ERROR
+2019-04-24 09:39:49	165992	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 110 | Undefined index:	ERROR
+2019-04-24 09:39:49	166852	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 112 | Undefined index:	ERROR
+2019-04-24 09:39:49	167447	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 117 | Undefined index:	ERROR
+2019-04-24 09:39:49	168159	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 118 | Undefined index:	ERROR
+2019-04-24 09:39:49	168337	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	168457	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	168983	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 122 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	169873	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	170037	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	170154	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 125 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	171288	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	171463	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	171641	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 128 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	172538	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	172704	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	172818	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 131 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	173670	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	173830	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	173944	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 134 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	174056	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 135 | Undefined index:	ERROR
+2019-04-24 09:39:49	175401	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	175570	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	175717	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 138 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	176570	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	176734	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	176851	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 141 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	177676	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	177838	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	177951	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 144 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	178628	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:39:49	178786	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:39:49	178896	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 147 | Trying to get property of non-object	ERROR
+
+
+2019-04-24 09:41:14	602536	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	602742	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	602868	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 487 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	602989	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 106 | Undefined index:	ERROR
+2019-04-24 09:41:14	605031	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 108 | Undefined index:	ERROR
+2019-04-24 09:41:14	605658	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 109 | Undefined index:	ERROR
+2019-04-24 09:41:14	606281	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 110 | Undefined index:	ERROR
+2019-04-24 09:41:14	607153	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 112 | Undefined index:	ERROR
+2019-04-24 09:41:14	607779	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 117 | Undefined index:	ERROR
+2019-04-24 09:41:14	608453	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 118 | Undefined index:	ERROR
+2019-04-24 09:41:14	608627	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	608747	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	608860	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 122 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	609663	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	609823	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	609940	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 125 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	610804	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	610965	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	611076	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 128 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	611917	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	612077	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	612191	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 131 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	613022	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	613178	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	618697	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 134 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	618897	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 135 | Undefined index:	ERROR
+2019-04-24 09:41:14	621298	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	621500	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	621624	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 138 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	623244	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	623523	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	623647	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 141 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	625385	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	625515	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	625600	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 144 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	626642	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 517 | Trying to get property of non-object	ERROR
+2019-04-24 09:41:14	626770	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 2 | Zeile: 517 | Invalid argument supplied for foreach()	ERROR
+2019-04-24 09:41:14	626852	?	26843	Datei: /usr/local/edomi/www/data/liveproject/lbs/EXE19001620.php | Fehlercode: 8 | Zeile: 147 | Trying to get property of non-object	ERROR
+                                                                       

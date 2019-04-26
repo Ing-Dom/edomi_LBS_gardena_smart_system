@@ -1,0 +1,2847 @@
+================ VAR_EXPORT START ================
+2019-04-25 13:58:06	265094	26037	debug	EXE19001620 [v0.22]
+
+gardena::__set_state(array(
+'user_id' => '3f0cdd35-ebb8-4984-a06c-26024c2000bd',
+'token' => 'cc4721a3-74c7-4d33-a877-c0b388984f26',
+'locations' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'fd574159-d8c6-4b60-b802-49ea4b2860d8',
+'name' => 'My Garden',
+'authorized_at' => '2018-05-21T13:06:59.557Z',
+'authorized_user_ids' =>
+array (
+),
+'device_flashing' =>
+stdClass::__set_state(array(
+)),
+'devices' =>
+array (
+0 => '0ea5eb61-bbf8-4bab-9f1d-c8703007dfd4',
+1 => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+),
+'zones' =>
+array (
+),
+)),
+),
+'devices' =>
+array (
+'fd574159-d8c6-4b60-b802-49ea4b2860d8' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '0ea5eb61-bbf8-4bab-9f1d-c8703007dfd4',
+'name' => 'Gateway',
+'description' => 'Gateway device',
+'category' => 'gateway',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-32212aec0665',
+'name' => 'device_info',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000000',
+'name' => 'manufacturer',
+'value' => 'Seluxit',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000001',
+'name' => 'product',
+'value' => '1-GATEWAY',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000002',
+'name' => 'serial_number',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000003',
+'name' => 'sgtin',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000004',
+'name' => 'connection_status',
+'value' => 'unknown',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000005',
+'name' => 'ethernet_status',
+'value' =>
+stdClass::__set_state(array(
+'mac' => '94:BB:AE:05:F5:F1',
+'ip' =>
+stdClass::__set_state(array(
+)),
+'isconnected' => 'false',
+)),
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000006',
+'name' => 'wifi_status',
+'value' =>
+stdClass::__set_state(array(
+'ssid' => 'dsnet',
+'mac' => '00:1D:43:00:7B:E5',
+'ip' => '192.168.178.56',
+'isconnected' => 'true',
+'signal' => '70%',
+)),
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000007',
+'name' => 'version',
+'value' => '2.2.1',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+8 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000008',
+'name' => 'category',
+'value' => 'gateway',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+9 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000009',
+'name' => 'last_time_online',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'device_info',
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-32212aec0665',
+'name' => 'gateway',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000000',
+'name' => 'ip_address',
+'value' => '192.168.178.56',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000001',
+'name' => 'time_zone',
+'value' => ' Africa/Ceuta (CEST, +0200)',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000002',
+'name' => 'homekit_setup_payload',
+'value' => 'X-HM://002M9TMO9TW7Q',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'gateway',
+)),
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-05-21T13:07:00.011Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-05-21T13:07:00.011Z',
+)),
+'constraints' =>
+array (
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+),
+'status_report_history' =>
+array (
+),
+'zones' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+'name' => 'Robby',
+'category' => 'mower',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '095f713f-9dc4-3bcc-b0c9-7ff24ff5e6e2',
+'name' => 'device_info',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '44782305-7b89-3a92-82fc-d63174bf5825',
+'name' => 'manufacturer',
+'value' => 'Gardena',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'cd2280db-3d7f-339c-a178-4a77a3520e6c',
+'name' => 'product',
+'value' => '3-DEVICE',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '91f26704-9fd1-3248-aeec-32aa0fa64f59',
+'name' => 'serial_number',
+'value' => '00056108',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'ab95cf86-5994-314f-87f2-ea01c225a923',
+'name' => 'version',
+'value' => '3.0.0-2.5.2-1.2.6-rc2-ICD1.17_1.4.8',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '972b229f-fcc3-341e-a2be-514d45765efa',
+'name' => 'category',
+'value' => 'mower',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '51148e30-7b42-3969-b5a4-b5afc5c73019',
+'name' => 'last_time_online',
+'value' => '2019-04-25T11:51:10.061Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '3f37df8d-f38a-33c3-a182-dc6244ba556e',
+'name' => 'sgtin',
+'value' => '3034F8EE900600800000DB2C',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => '90dbf855-c68e-3cc8-9329-cfbbe81fb473',
+'name' => 'connection_status',
+'value' => 'online',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'device_info',
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '8b50caa4-cb99-328b-bf4e-3b1e771a162d',
+'name' => 'battery',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '4d1b5270-638a-307b-a2a2-5febac9b8ad7',
+'name' => 'level',
+'timestamp' => '2019-04-25T11:51:10.061Z',
+'unit' => '%',
+'value' => 100,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'bbbe6f76-7a6c-36bc-be71-7795b64b0b82',
+'name' => 'charging',
+'timestamp' => '2019-04-25T11:51:10.061Z',
+'value' => false,
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'true',
+1 => 'false',
+),
+)),
+),
+'type' => 'battery_power',
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '7da714a3-873d-38b8-8da2-8c33b4c2f95f',
+'name' => 'radio',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '8f3b39de-643d-3554-95e9-ae22198926b4',
+'name' => 'quality',
+'timestamp' => '2019-04-25T11:51:10.097Z',
+'unit' => '%',
+'value' => 40,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'ba6a2584-e2ef-3131-b53b-ff11c6e62da8',
+'name' => 'connection_status',
+'timestamp' => '2018-12-01T12:43:17.850Z',
+'value' => 'status_device_unreachable',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'unknown',
+1 => 'status_device_unreachable',
+2 => 'status_device_alive',
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '0ee90e1c-cd5a-3ab2-a5ea-d00997a118e8',
+'name' => 'state',
+'timestamp' => '2019-04-25T11:51:10.140Z',
+'value' => 'poor',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'bad',
+1 => 'poor',
+2 => 'good',
+3 => 'undefined',
+),
+)),
+),
+'type' => 'radio_link',
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'a4139487-8d4e-3b5e-bdb8-d56dc22644c3',
+'name' => 'firmware',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'dbbcfa0c-e072-3457-b16e-92cab3ef6f41',
+'name' => 'firmware_status',
+'value' => 'upload_complete',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '5b5d3700-857c-3b13-ab88-9259b02d0c82',
+'name' => 'firmware_upload_progress',
+'value' => 0,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '46e79d16-878a-364a-872e-d7c01058955f',
+'name' => 'firmware_available_version',
+'value' => '2.5.2_1.2.6_1.5.2',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => '54749320-cebb-3c16-8d8d-d434d23331cd',
+'name' => 'inclusion_status',
+'value' => 'included',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '0fb8f708-ccdb-30ff-9a7c-9fe5d527c17d',
+'name' => 'firmware_update_start',
+'value' => true,
+'writeable' => true,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '3fed1baa-a155-3f53-87aa-922f3199cf72',
+'name' => 'firmware_command',
+'value' => 'idle',
+'writeable' => true,
+'supported_values' =>
+array (
+0 => 'idle',
+1 => 'firmware_cancel',
+2 => 'firmware_flash',
+3 => 'firmware_upload',
+4 => 'unsupported',
+),
+)),
+),
+'type' => 'firmware',
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => 'bb169168-4c2c-3660-8c0d-b79570ba189e',
+'name' => 'mower',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'c53a0a0b-6f83-3004-8215-408ca7630347',
+'name' => 'manual_operation',
+'timestamp' => '2019-04-25T11:51:10.169Z',
+'value' => false,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '1310551d-e9d4-36dd-9d7e-9f1ba35c847c',
+'name' => 'status',
+'timestamp' => '2019-04-25T11:51:10.210Z',
+'value' => 'parked_park_selected',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'paused',
+2 => 'ok_cutting',
+3 => 'ok_searching',
+4 => 'ok_charging',
+5 => 'ok_leaving',
+6 => 'wait_updating',
+7 => 'wait_power_up',
+8 => 'parked_timer',
+9 => 'parked_park_selected',
+10 => 'off_disabled',
+11 => 'off_hatch_open',
+12 => 'unknown',
+13 => 'error',
+14 => 'error_at_power_up',
+15 => 'off_hatch_closed',
+16 => 'ok_cutting_timer_overridden',
+17 => 'parked_autotimer',
+18 => 'parked_weathertimer',
+19 => 'parked_daily_limit_reached',
+20 => 'undefined',
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '87735ff9-e8b3-36b5-b9d7-b758e5dc7e2e',
+'name' => 'error',
+'timestamp' => '2019-04-25T11:51:10.210Z',
+'value' => 'no_message',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'no_message',
+2 => 'outside_working_area',
+3 => 'no_loop_signal',
+4 => 'wrong_loop_signal',
+5 => 'loop_sensor_problem_front',
+6 => 'loop_sensor_problem_rear',
+7 => 'loop_sensor_problem_left',
+8 => 'loop_sensor_problem_right',
+9 => 'wrong_pin_code',
+10 => 'trapped',
+11 => 'upside_down',
+12 => 'low_battery',
+13 => 'empty_battery',
+14 => 'no_drive',
+15 => 'temporarily_lifted',
+16 => 'lifted',
+17 => 'stuck_in_charging_station',
+18 => 'charging_station_blocked',
+19 => 'collision_sensor_problem_rear',
+20 => 'collision_sensor_problem_front',
+21 => 'wheel_motor_blocked_right',
+22 => 'wheel_motor_blocked_left',
+23 => 'wheel_drive_problem_right',
+24 => 'wheel_drive_problem_left',
+25 => 'cutting_motor_drive_defect',
+26 => 'cutting_system_blocked',
+27 => 'invalid_sub_device_combination',
+28 => 'settings_restored',
+29 => 'memory_circuit_problem',
+30 => 'slope_too_steep',
+31 => 'charging_system_problem',
+32 => 'stop_button_problem',
+33 => 'tilt_sensor_problem',
+34 => 'mower_tilted',
+35 => 'wheel_motor_overloaded_right',
+36 => 'wheel_motor_overloaded_left',
+37 => 'charging_current_too_high',
+38 => 'electronic_problem',
+39 => 'cutting_motor_problem',
+40 => 'limited_cutting_height_range',
+41 => 'unexpected_cutting_height_adj',
+42 => 'cutting_height_problem_drive',
+43 => 'cutting_height_problem_curr',
+44 => 'cutting_height_problem_dir',
+45 => 'cutting_height_blocked',
+46 => 'cutting_height_problem',
+47 => 'no_response_from_charger',
+48 => 'ultrasonic_problem',
+49 => 'temporary_problem',
+50 => 'guide_1_not_found',
+51 => 'guide_2_not_found',
+52 => 'guide_3_not_found',
+53 => 'gps_tracker_module_error',
+54 => 'weak_gps_signal',
+55 => 'difficult_finding_home',
+56 => 'guide_calibration_accomplished',
+57 => 'guide_calibration_failed',
+58 => 'temporary_battery_problem',
+59 => 'battery_problem',
+60 => 'too_many_batteries',
+61 => 'alarm_mower_switched_off',
+62 => 'alarm_mower_stopped',
+63 => 'alarm_mower_lifted',
+64 => 'alarm_mower_tilted',
+65 => 'alarm_mower_in_motion',
+66 => 'alarm_outside_geofence',
+67 => 'connection_changed',
+68 => 'connection_not_changed',
+69 => 'com_board_not_available',
+70 => 'slipped',
+71 => 'invalid_battery_combination',
+72 => 'imbalanced_cutting_disc',
+73 => 'safety_function_faulty',
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'ff4f9e60-ff15-34af-9426-9bf76f18ab96',
+'name' => 'last_error_code',
+'timestamp' => '2019-04-25T11:51:10.381Z',
+'value' => 'no_message',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '4ca25649-3d06-3f6a-92fa-317f34901279',
+'name' => 'timestamp_last_error_code',
+'timestamp' => '2019-04-25T11:51:10.416Z',
+'value' => '1970-01-01T00:00Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'e2493575-a39f-3980-b04c-5133aa7b46e7',
+'name' => 'source_for_next_start',
+'timestamp' => '2019-04-25T11:51:10.240Z',
+'value' => 'no_source',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'no_source',
+2 => 'completed_cutting_daily_limit',
+3 => 'week_timer',
+4 => 'countdown_time',
+5 => 'mower_charging',
+6 => 'completed_cutting_autotimer',
+7 => 'undefined',
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '73d31ef8-7352-30e3-9e1d-b6cc8d9e9c52',
+'name' => 'override_end_time',
+'timestamp' => '2019-04-25T11:51:10.314Z',
+'value' => '2019-04-16T17:08:45Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => 'c7f09e7e-2301-38fb-8767-962228b065bd',
+'name' => 'timestamp_next_start',
+'timestamp' => '2019-04-25T11:51:10.277Z',
+'value' => '1969-12-31T22:00Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower',
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'f5d811fe-ebe1-363c-81dd-1735d5959805',
+'name' => 'mower_stats',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'dc6ad333-fbc2-32aa-b001-9e50093d8197',
+'name' => 'cutting_time',
+'timestamp' => '2019-04-16T06:20:42.823Z',
+'unit' => 'h',
+'value' => 816,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '3656da33-f849-3b12-958d-279d90697879',
+'name' => 'charging_cycles',
+'timestamp' => '2019-04-16T05:21:20.785Z',
+'value' => 824,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '2f3035c1-16a3-324c-9c5c-6ff4c09c8972',
+'name' => 'collisions',
+'timestamp' => '2019-04-16T06:20:43.022Z',
+'value' => 354,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => '20ecd89f-1764-3ebc-b008-9ed759d8f716',
+'name' => 'running_time',
+'timestamp' => '2019-04-16T06:20:42.786Z',
+'unit' => 'h',
+'value' => 869,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower_stats',
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '7050f497-ada7-33f9-8ba0-3f115082bf3b',
+'name' => 'mower_type',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'd190d674-a322-3b43-8a81-1d42180da2cc',
+'name' => 'base_software_up_to_date',
+'timestamp' => '2018-05-23T13:37:57.647Z',
+'value' => true,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '7f822da4-222e-3734-8aea-9811dd6df596',
+'name' => 'mmi_version',
+'timestamp' => '2018-05-23T13:37:57.638Z',
+'value' => '10.12',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '36433353-cb6b-31e7-91c1-eff2941ffc0a',
+'name' => 'mainboard_version',
+'timestamp' => '2018-05-23T13:37:57.647Z',
+'value' => '10.19',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'cc843efa-5a7e-3766-b4a5-25732747e491',
+'name' => 'comboard_version',
+'timestamp' => '2018-05-23T13:37:57.660Z',
+'value' => '11.5',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '7c604ce5-c426-311c-abfe-3851d52ce32a',
+'name' => 'device_type',
+'timestamp' => '2018-05-23T13:37:57.681Z',
+'value' => '13',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '3b9d38ec-c0cd-376e-9170-d7c72d2cecf0',
+'name' => 'device_variant',
+'timestamp' => '2018-05-23T13:37:57.697Z',
+'value' => '1',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => 'b9f00b59-ca0a-35af-9f1f-35ed1840492e',
+'name' => 'serial_number',
+'timestamp' => '2018-05-23T13:37:57.965Z',
+'value' => '181515206',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower_type',
+)),
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'constraints' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'resource_name' => 'scheduling_wizard_mowing',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'is_supported',
+'unit' => '',
+'value' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'selection_requirements',
+'unit' => '',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'area' => 25,
+'days' => 5,
+'time_slots' => 1,
+)),
+1 =>
+stdClass::__set_state(array(
+'area' => 50,
+'days' => 5,
+'time_slots' => 1,
+)),
+2 =>
+stdClass::__set_state(array(
+'area' => 75,
+'days' => 5,
+'time_slots' => 1,
+)),
+3 =>
+stdClass::__set_state(array(
+'area' => 100,
+'days' => 5,
+'time_slots' => 1,
+)),
+4 =>
+stdClass::__set_state(array(
+'area' => 125,
+'days' => 5,
+'time_slots' => 1,
+)),
+5 =>
+stdClass::__set_state(array(
+'area' => 150,
+'days' => 5,
+'time_slots' => 1,
+)),
+6 =>
+stdClass::__set_state(array(
+'area' => 175,
+'days' => 5,
+'time_slots' => 1,
+)),
+7 =>
+stdClass::__set_state(array(
+'area' => 200,
+'days' => 5,
+'time_slots' => 1,
+)),
+8 =>
+stdClass::__set_state(array(
+'area' => 225,
+'days' => 5,
+'time_slots' => 1,
+)),
+9 =>
+stdClass::__set_state(array(
+'area' => 250,
+'days' => 5,
+'time_slots' => 1,
+)),
+10 =>
+stdClass::__set_state(array(
+'area' => 275,
+'days' => 5,
+'time_slots' => 2,
+)),
+11 =>
+stdClass::__set_state(array(
+'area' => 300,
+'days' => 5,
+'time_slots' => 2,
+)),
+12 =>
+stdClass::__set_state(array(
+'area' => 325,
+'days' => 5,
+'time_slots' => 2,
+)),
+13 =>
+stdClass::__set_state(array(
+'area' => 350,
+'days' => 5,
+'time_slots' => 2,
+)),
+14 =>
+stdClass::__set_state(array(
+'area' => 375,
+'days' => 5,
+'time_slots' => 2,
+)),
+15 =>
+stdClass::__set_state(array(
+'area' => 400,
+'days' => 5,
+'time_slots' => 2,
+)),
+16 =>
+stdClass::__set_state(array(
+'area' => 425,
+'days' => 5,
+'time_slots' => 2,
+)),
+17 =>
+stdClass::__set_state(array(
+'area' => 450,
+'days' => 5,
+'time_slots' => 2,
+)),
+18 =>
+stdClass::__set_state(array(
+'area' => 475,
+'days' => 5,
+'time_slots' => 2,
+)),
+19 =>
+stdClass::__set_state(array(
+'area' => 500,
+'days' => 5,
+'time_slots' => 2,
+)),
+20 =>
+stdClass::__set_state(array(
+'area' => 525,
+'days' => 5,
+'time_slots' => 3,
+)),
+21 =>
+stdClass::__set_state(array(
+'area' => 550,
+'days' => 5,
+'time_slots' => 3,
+)),
+22 =>
+stdClass::__set_state(array(
+'area' => 575,
+'days' => 5,
+'time_slots' => 3,
+)),
+23 =>
+stdClass::__set_state(array(
+'area' => 600,
+'days' => 5,
+'time_slots' => 3,
+)),
+24 =>
+stdClass::__set_state(array(
+'area' => 625,
+'days' => 5,
+'time_slots' => 3,
+)),
+25 =>
+stdClass::__set_state(array(
+'area' => 650,
+'days' => 5,
+'time_slots' => 3,
+)),
+26 =>
+stdClass::__set_state(array(
+'area' => 675,
+'days' => 5,
+'time_slots' => 3,
+)),
+27 =>
+stdClass::__set_state(array(
+'area' => 700,
+'days' => 5,
+'time_slots' => 3,
+)),
+28 =>
+stdClass::__set_state(array(
+'area' => 725,
+'days' => 6,
+'time_slots' => 3,
+)),
+29 =>
+stdClass::__set_state(array(
+'area' => 750,
+'days' => 6,
+'time_slots' => 3,
+)),
+30 =>
+stdClass::__set_state(array(
+'area' => 775,
+'days' => 6,
+'time_slots' => 3,
+)),
+31 =>
+stdClass::__set_state(array(
+'area' => 800,
+'days' => 6,
+'time_slots' => 3,
+)),
+32 =>
+stdClass::__set_state(array(
+'area' => 825,
+'days' => 6,
+'time_slots' => 3,
+)),
+33 =>
+stdClass::__set_state(array(
+'area' => 850,
+'days' => 6,
+'time_slots' => 3,
+)),
+34 =>
+stdClass::__set_state(array(
+'area' => 875,
+'days' => 6,
+'time_slots' => 3,
+)),
+35 =>
+stdClass::__set_state(array(
+'area' => 900,
+'days' => 6,
+'time_slots' => 3,
+)),
+36 =>
+stdClass::__set_state(array(
+'area' => 925,
+'days' => 6,
+'time_slots' => 3,
+)),
+37 =>
+stdClass::__set_state(array(
+'area' => 950,
+'days' => 6,
+'time_slots' => 3,
+)),
+38 =>
+stdClass::__set_state(array(
+'area' => 975,
+'days' => 6,
+'time_slots' => 3,
+)),
+39 =>
+stdClass::__set_state(array(
+'area' => 1000,
+'days' => 6,
+'time_slots' => 3,
+)),
+),
+)),
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'resource_name' => 'scheduled_events',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'is_supported',
+'unit' => '',
+'value' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'events_week_max',
+'unit' => '',
+'value' => 14,
+)),
+2 =>
+stdClass::__set_state(array(
+'name' => 'events_day_max',
+'unit' => '',
+'value' => 2,
+)),
+3 =>
+stdClass::__set_state(array(
+'name' => 'events_week_min',
+'unit' => '',
+'value' => 1,
+)),
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'resource_name' => 'starting_points',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'supported_loop_wires',
+'unit' => '',
+'value' =>
+array (
+0 => 'guide_1',
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'count',
+'unit' => '',
+'value' => 3,
+)),
+),
+)),
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b64f79fb-049d-480e-a966-407752e7ebf6',
+'start_at' => '11:00',
+'end_at' => '17:00',
+'recurrence' =>
+stdClass::__set_state(array(
+'type' => 'weekly',
+'weekdays' =>
+array (
+0 => 'monday',
+1 => 'tuesday',
+2 => 'wednesday',
+3 => 'thursday',
+4 => 'friday',
+5 => 'saturday',
+6 => 'sunday',
+),
+)),
+)),
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'starting_points',
+'id' => 'd15f3dd6-a295-4060-9d48-1ade41aecbe2',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 300,
+'probability_in_percent' => 10,
+'enabled' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 35,
+'probability_in_percent' => 40,
+'enabled' => true,
+)),
+2 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 0,
+'probability_in_percent' => 0,
+'enabled' => false,
+)),
+),
+)),
+),
+'status_report_history' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-21T03:19:00.361Z',
+)),
+1 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-20T20:33:53.162Z',
+)),
+2 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-19T05:51:25.270Z',
+)),
+3 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-18T23:36:24.952Z',
+)),
+4 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-18T18:51:26.848Z',
+)),
+5 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-17T17:07:48.837Z',
+)),
+6 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-15T18:12:38.304Z',
+)),
+7 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-15T08:21:32.981Z',
+)),
+8 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-14T03:16:32.913Z',
+)),
+9 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-13T22:32:25.109Z',
+)),
+10 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-13T18:51:32.933Z',
+)),
+11 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-08T00:07:44.228Z',
+)),
+12 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-05T16:06:15.245Z',
+)),
+13 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-12-01T12:43:17.850Z',
+)),
+14 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-12-01T09:27:34.671Z',
+)),
+15 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-22T22:43:29.046Z',
+)),
+16 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-11-22T19:55:05.062Z',
+)),
+17 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-20T18:43:31.609Z',
+)),
+18 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-11-20T12:28:25.824Z',
+)),
+19 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-19T17:43:32.745Z',
+)),
+20 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-07T13:03:20.590Z',
+)),
+21 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-02T12:33:38.106Z',
+)),
+22 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-01T13:52:07.829Z',
+)),
+23 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-01T13:50:07.759Z',
+)),
+24 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-30T13:32:56.842Z',
+)),
+25 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-22T21:54:44.060Z',
+)),
+26 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-21T21:37:43.404Z',
+)),
+27 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-21T21:37:43.381Z',
+)),
+28 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'UPLOAD_COMPLETE',
+'raw_message' => 'UPLOAD_COMPLETE',
+'source' => 'gateway',
+'timestamp' => '2018-10-12T00:08:40.479Z',
+)),
+29 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'UPLOADING',
+'raw_message' => 'UPLOADING',
+'source' => 'gateway',
+'timestamp' => '2018-10-11T23:44:55.890Z',
+)),
+),
+'zones' =>
+array (
+),
+)),
+),
+),
+'CMD_MOWER_PARK_UNTIL_NEXT_TIMER' =>
+array (
+'name' => 'park_until_next_timer',
+),
+'CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE' =>
+array (
+'name' => 'park_until_further_notice',
+),
+'CMD_MOWER_START_RESUME_SCHEDULE' =>
+array (
+'name' => 'start_resume_schedule',
+),
+'CMD_MOWER_START_24HOURS' =>
+array (
+'name' => 'start_override_timer',
+'parameters' =>
+array (
+'duration' => 1440,
+),
+),
+'CMD_MOWER_START_3DAYS' =>
+array (
+'name' => 'start_override_timer',
+'parameters' =>
+array (
+'duration' => 4320,
+),
+),
+'CMD_SENSOR_REFRESH_TEMPERATURE' =>
+array (
+'name' => 'measure_ambient_temperature',
+),
+'CMD_SENSOR_REFRESH_LIGHT' =>
+array (
+'name' => 'measure_light',
+),
+'CMD_SENSOR_REFRESH_HUMIDITY' =>
+array (
+'name' => 'measure_humidity',
+),
+'CMD_WATERINGCOMPUTER_START_30MIN' =>
+array (
+'name' => 'manual_override',
+'parameters' =>
+array (
+'duration' => 30,
+),
+),
+'CMD_WATERINGCOMPUTER_STOP' =>
+array (
+'name' => 'cancel_override',
+),
+'status_map' =>
+array (
+'paused' => 'Pausiert',
+'ok_cutting' => 'Mähen',
+'ok_searching' => 'Suche Ladestation',
+'ok_charging' => 'Lädt',
+'ok_leaving' => 'Mähen',
+'wait_updating' => 'Wird aktualisiert ...',
+'wait_power_up' => 'Wird eingeschaltet ...',
+'parked_timer' => 'Geparkt nach Zeitplan',
+'parked_park_selected' => 'Geparkt',
+'off_disabled' => 'Der Mäher ist ausgeschaltet',
+'off_hatch_open' => 'Deaktiviert. Abdeckung ist offen oder PIN-Code erforderlich',
+'unknown' => 'Unbekannter Status',
+'error' => 'Fehler',
+'error_at_power_up' => 'Neustart ...',
+'off_hatch_closed' => 'Deaktiviert. Manueller Start erforderlich',
+'ok_cutting_timer_overridden' => 'Manuelles Mähen',
+'parked_autotimer' => 'Geparkt durch SensorControl',
+'parked_daily_limit_reached' => 'Abgeschlossen',
+),
+'status_map_int' =>
+array (
+'paused' => 0,
+'ok_cutting' => 10,
+'ok_searching' => 9,
+'ok_charging' => 5,
+'ok_leaving' => 10,
+'wait_updating' => 19,
+'wait_power_up' => 19,
+'parked_timer' => 2,
+'parked_park_selected' => 2,
+'off_disabled' => 0,
+'off_hatch_open' => 0,
+'unknown' => 20,
+'error' => 20,
+'error_at_power_up' => 20,
+'off_hatch_closed' => 0,
+'ok_cutting_timer_overridden' => 10,
+'parked_autotimer' => 2,
+'parked_daily_limit_reached' => 2,
+),
+'error_map' =>
+array (
+'no_message' => 'Kein Fehler',
+'outside_working_area' => 'Außerhalb des Arbeitsbereichs',
+'no_loop_signal' => 'Kein Schleifensignal',
+'wrong_loop_signal' => 'Falsches Schleifensignal',
+'loop_sensor_problem_front' => 'Problem Schleifensensor, vorne',
+'loop_sensor_problem_rear' => 'Problem Schleifensensor, hinten',
+'trapped' => 'Eingeschlossen',
+'upside_down' => 'Steht auf dem Kopf',
+'low_battery' => 'Niedriger Batteriestand',
+'empty_battery' => 'empty_battery',
+'no_drive' => 'no_drive',
+'lifted' => 'Angehoben',
+'stuck_in_charging_station' => 'Eingeklemmt in Ladestation',
+'charging_station_blocked' => 'Ladestation blockiert',
+'collision_sensor_problem_rear' => 'Problem Stoßsensor hinten',
+'collision_sensor_problem_front' => 'Problem Stoßsensor vorne',
+'wheel_motor_blocked_right' => 'Radmotor rechts blockiert',
+'wheel_motor_blocked_left' => 'Radmotor links blockiert',
+'wheel_drive_problem_right' => 'Problem Antrieb, rechts',
+'wheel_drive_problem_left' => 'Problem Antrieb, links',
+'cutting_system_blocked' => 'Schneidsystem blockiert',
+'invalid_sub_device_combination' => 'Fehlerhafte Verbindung',
+'settings_restored' => 'Standardeinstellungen',
+'electronic_problem' => 'Elektronisches Problem',
+'charging_system_problem' => 'Problem Ladesystem',
+'tilt_sensor_problem' => 'Kippsensorproblem',
+'wheel_motor_overloaded_right' => 'Rechter Radmotor überlastet',
+'wheel_motor_overloaded_left' => 'Linker Radmotor überlastet',
+'charging_current_too_high' => 'Ladestrom zu hoch',
+'temporary_problem' => 'Vorübergehendes Problem',
+'guide_1_not_found' => 'SK 1 nicht gefunden',
+'guide_2_not_found' => 'SK 2 nicht gefunden',
+'guide_3_not_found' => 'SK 3 nicht gefunden',
+'difficult_finding_home' => 'Problem die Ladestation zu finden',
+'guide_calibration_accomplished' => 'Kalibration des Suchkabels beendet',
+'guide_calibration_failed' => 'Kalibration des Suchkabels fehlgeschlagen',
+'temporary_battery_problem' => 'Kurzzeitiges Batterieproblem',
+'battery_problem' => 'Batterieproblem',
+'alarm_mower_switched_off' => 'Alarm! Mäher ausgeschalten',
+'alarm_mower_stopped' => 'Alarm! Mäher gestoppt',
+'alarm_mower_lifted' => 'Alarm! Mäher angehoben',
+'alarm_mower_tilted' => 'Alarm! Mäher gekippt',
+'connection_changed' => 'Verbindung geändert',
+'connection_not_changed' => 'Verbindung nicht geändert',
+'com_board_not_available' => 'COM board nicht verfügbar',
+'slipped' => 'Rutscht',
+),
+))
+================ VAR_EXPORT END ================
+mower debug
+================ VAR_EXPORT START ================
+stdClass::__set_state(array(
+'id' => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+'name' => 'Robby',
+'category' => 'mower',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '095f713f-9dc4-3bcc-b0c9-7ff24ff5e6e2',
+'name' => 'device_info',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '44782305-7b89-3a92-82fc-d63174bf5825',
+'name' => 'manufacturer',
+'value' => 'Gardena',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'cd2280db-3d7f-339c-a178-4a77a3520e6c',
+'name' => 'product',
+'value' => '3-DEVICE',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '91f26704-9fd1-3248-aeec-32aa0fa64f59',
+'name' => 'serial_number',
+'value' => '00056108',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'ab95cf86-5994-314f-87f2-ea01c225a923',
+'name' => 'version',
+'value' => '3.0.0-2.5.2-1.2.6-rc2-ICD1.17_1.4.8',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '972b229f-fcc3-341e-a2be-514d45765efa',
+'name' => 'category',
+'value' => 'mower',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '51148e30-7b42-3969-b5a4-b5afc5c73019',
+'name' => 'last_time_online',
+'value' => '2019-04-25T11:51:10.061Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '3f37df8d-f38a-33c3-a182-dc6244ba556e',
+'name' => 'sgtin',
+'value' => '3034F8EE900600800000DB2C',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => '90dbf855-c68e-3cc8-9329-cfbbe81fb473',
+'name' => 'connection_status',
+'value' => 'online',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'device_info',
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '8b50caa4-cb99-328b-bf4e-3b1e771a162d',
+'name' => 'battery',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '4d1b5270-638a-307b-a2a2-5febac9b8ad7',
+'name' => 'level',
+'timestamp' => '2019-04-25T11:51:10.061Z',
+'unit' => '%',
+'value' => 100,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'bbbe6f76-7a6c-36bc-be71-7795b64b0b82',
+'name' => 'charging',
+'timestamp' => '2019-04-25T11:51:10.061Z',
+'value' => false,
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'true',
+1 => 'false',
+),
+)),
+),
+'type' => 'battery_power',
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '7da714a3-873d-38b8-8da2-8c33b4c2f95f',
+'name' => 'radio',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '8f3b39de-643d-3554-95e9-ae22198926b4',
+'name' => 'quality',
+'timestamp' => '2019-04-25T11:51:10.097Z',
+'unit' => '%',
+'value' => 40,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'ba6a2584-e2ef-3131-b53b-ff11c6e62da8',
+'name' => 'connection_status',
+'timestamp' => '2018-12-01T12:43:17.850Z',
+'value' => 'status_device_unreachable',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'unknown',
+1 => 'status_device_unreachable',
+2 => 'status_device_alive',
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '0ee90e1c-cd5a-3ab2-a5ea-d00997a118e8',
+'name' => 'state',
+'timestamp' => '2019-04-25T11:51:10.140Z',
+'value' => 'poor',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'bad',
+1 => 'poor',
+2 => 'good',
+3 => 'undefined',
+),
+)),
+),
+'type' => 'radio_link',
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'a4139487-8d4e-3b5e-bdb8-d56dc22644c3',
+'name' => 'firmware',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'dbbcfa0c-e072-3457-b16e-92cab3ef6f41',
+'name' => 'firmware_status',
+'value' => 'upload_complete',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '5b5d3700-857c-3b13-ab88-9259b02d0c82',
+'name' => 'firmware_upload_progress',
+'value' => 0,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '46e79d16-878a-364a-872e-d7c01058955f',
+'name' => 'firmware_available_version',
+'value' => '2.5.2_1.2.6_1.5.2',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => '54749320-cebb-3c16-8d8d-d434d23331cd',
+'name' => 'inclusion_status',
+'value' => 'included',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '0fb8f708-ccdb-30ff-9a7c-9fe5d527c17d',
+'name' => 'firmware_update_start',
+'value' => true,
+'writeable' => true,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '3fed1baa-a155-3f53-87aa-922f3199cf72',
+'name' => 'firmware_command',
+'value' => 'idle',
+'writeable' => true,
+'supported_values' =>
+array (
+0 => 'idle',
+1 => 'firmware_cancel',
+2 => 'firmware_flash',
+3 => 'firmware_upload',
+4 => 'unsupported',
+),
+)),
+),
+'type' => 'firmware',
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => 'bb169168-4c2c-3660-8c0d-b79570ba189e',
+'name' => 'mower',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'c53a0a0b-6f83-3004-8215-408ca7630347',
+'name' => 'manual_operation',
+'timestamp' => '2019-04-25T11:51:10.169Z',
+'value' => false,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '1310551d-e9d4-36dd-9d7e-9f1ba35c847c',
+'name' => 'status',
+'timestamp' => '2019-04-25T11:51:10.210Z',
+'value' => 'parked_park_selected',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'paused',
+2 => 'ok_cutting',
+3 => 'ok_searching',
+4 => 'ok_charging',
+5 => 'ok_leaving',
+6 => 'wait_updating',
+7 => 'wait_power_up',
+8 => 'parked_timer',
+9 => 'parked_park_selected',
+10 => 'off_disabled',
+11 => 'off_hatch_open',
+12 => 'unknown',
+13 => 'error',
+14 => 'error_at_power_up',
+15 => 'off_hatch_closed',
+16 => 'ok_cutting_timer_overridden',
+17 => 'parked_autotimer',
+18 => 'parked_weathertimer',
+19 => 'parked_daily_limit_reached',
+20 => 'undefined',
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '87735ff9-e8b3-36b5-b9d7-b758e5dc7e2e',
+'name' => 'error',
+'timestamp' => '2019-04-25T11:51:10.210Z',
+'value' => 'no_message',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'no_message',
+2 => 'outside_working_area',
+3 => 'no_loop_signal',
+4 => 'wrong_loop_signal',
+5 => 'loop_sensor_problem_front',
+6 => 'loop_sensor_problem_rear',
+7 => 'loop_sensor_problem_left',
+8 => 'loop_sensor_problem_right',
+9 => 'wrong_pin_code',
+10 => 'trapped',
+11 => 'upside_down',
+12 => 'low_battery',
+13 => 'empty_battery',
+14 => 'no_drive',
+15 => 'temporarily_lifted',
+16 => 'lifted',
+17 => 'stuck_in_charging_station',
+18 => 'charging_station_blocked',
+19 => 'collision_sensor_problem_rear',
+20 => 'collision_sensor_problem_front',
+21 => 'wheel_motor_blocked_right',
+22 => 'wheel_motor_blocked_left',
+23 => 'wheel_drive_problem_right',
+24 => 'wheel_drive_problem_left',
+25 => 'cutting_motor_drive_defect',
+26 => 'cutting_system_blocked',
+27 => 'invalid_sub_device_combination',
+28 => 'settings_restored',
+29 => 'memory_circuit_problem',
+30 => 'slope_too_steep',
+31 => 'charging_system_problem',
+32 => 'stop_button_problem',
+33 => 'tilt_sensor_problem',
+34 => 'mower_tilted',
+35 => 'wheel_motor_overloaded_right',
+36 => 'wheel_motor_overloaded_left',
+37 => 'charging_current_too_high',
+38 => 'electronic_problem',
+39 => 'cutting_motor_problem',
+40 => 'limited_cutting_height_range',
+41 => 'unexpected_cutting_height_adj',
+42 => 'cutting_height_problem_drive',
+43 => 'cutting_height_problem_curr',
+44 => 'cutting_height_problem_dir',
+45 => 'cutting_height_blocked',
+46 => 'cutting_height_problem',
+47 => 'no_response_from_charger',
+48 => 'ultrasonic_problem',
+49 => 'temporary_problem',
+50 => 'guide_1_not_found',
+51 => 'guide_2_not_found',
+52 => 'guide_3_not_found',
+53 => 'gps_tracker_module_error',
+54 => 'weak_gps_signal',
+55 => 'difficult_finding_home',
+56 => 'guide_calibration_accomplished',
+57 => 'guide_calibration_failed',
+58 => 'temporary_battery_problem',
+59 => 'battery_problem',
+60 => 'too_many_batteries',
+61 => 'alarm_mower_switched_off',
+62 => 'alarm_mower_stopped',
+63 => 'alarm_mower_lifted',
+64 => 'alarm_mower_tilted',
+65 => 'alarm_mower_in_motion',
+66 => 'alarm_outside_geofence',
+67 => 'connection_changed',
+68 => 'connection_not_changed',
+69 => 'com_board_not_available',
+70 => 'slipped',
+71 => 'invalid_battery_combination',
+72 => 'imbalanced_cutting_disc',
+73 => 'safety_function_faulty',
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'ff4f9e60-ff15-34af-9426-9bf76f18ab96',
+'name' => 'last_error_code',
+'timestamp' => '2019-04-25T11:51:10.381Z',
+'value' => 'no_message',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '4ca25649-3d06-3f6a-92fa-317f34901279',
+'name' => 'timestamp_last_error_code',
+'timestamp' => '2019-04-25T11:51:10.416Z',
+'value' => '1970-01-01T00:00Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'e2493575-a39f-3980-b04c-5133aa7b46e7',
+'name' => 'source_for_next_start',
+'timestamp' => '2019-04-25T11:51:10.240Z',
+'value' => 'no_source',
+'writeable' => false,
+'supported_values' =>
+array (
+0 => 'uninitialised',
+1 => 'no_source',
+2 => 'completed_cutting_daily_limit',
+3 => 'week_timer',
+4 => 'countdown_time',
+5 => 'mower_charging',
+6 => 'completed_cutting_autotimer',
+7 => 'undefined',
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '73d31ef8-7352-30e3-9e1d-b6cc8d9e9c52',
+'name' => 'override_end_time',
+'timestamp' => '2019-04-25T11:51:10.314Z',
+'value' => '2019-04-16T17:08:45Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => 'c7f09e7e-2301-38fb-8767-962228b065bd',
+'name' => 'timestamp_next_start',
+'timestamp' => '2019-04-25T11:51:10.277Z',
+'value' => '1969-12-31T22:00Z',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower',
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'f5d811fe-ebe1-363c-81dd-1735d5959805',
+'name' => 'mower_stats',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'dc6ad333-fbc2-32aa-b001-9e50093d8197',
+'name' => 'cutting_time',
+'timestamp' => '2019-04-16T06:20:42.823Z',
+'unit' => 'h',
+'value' => 816,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '3656da33-f849-3b12-958d-279d90697879',
+'name' => 'charging_cycles',
+'timestamp' => '2019-04-16T05:21:20.785Z',
+'value' => 824,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '2f3035c1-16a3-324c-9c5c-6ff4c09c8972',
+'name' => 'collisions',
+'timestamp' => '2019-04-16T06:20:43.022Z',
+'value' => 354,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => '20ecd89f-1764-3ebc-b008-9ed759d8f716',
+'name' => 'running_time',
+'timestamp' => '2019-04-16T06:20:42.786Z',
+'unit' => 'h',
+'value' => 869,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower_stats',
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => '7050f497-ada7-33f9-8ba0-3f115082bf3b',
+'name' => 'mower_type',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'd190d674-a322-3b43-8a81-1d42180da2cc',
+'name' => 'base_software_up_to_date',
+'timestamp' => '2018-05-23T13:37:57.647Z',
+'value' => true,
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '7f822da4-222e-3734-8aea-9811dd6df596',
+'name' => 'mmi_version',
+'timestamp' => '2018-05-23T13:37:57.638Z',
+'value' => '10.12',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => '36433353-cb6b-31e7-91c1-eff2941ffc0a',
+'name' => 'mainboard_version',
+'timestamp' => '2018-05-23T13:37:57.647Z',
+'value' => '10.19',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'cc843efa-5a7e-3766-b4a5-25732747e491',
+'name' => 'comboard_version',
+'timestamp' => '2018-05-23T13:37:57.660Z',
+'value' => '11.5',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => '7c604ce5-c426-311c-abfe-3851d52ce32a',
+'name' => 'device_type',
+'timestamp' => '2018-05-23T13:37:57.681Z',
+'value' => '13',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => '3b9d38ec-c0cd-376e-9170-d7c72d2cecf0',
+'name' => 'device_variant',
+'timestamp' => '2018-05-23T13:37:57.697Z',
+'value' => '1',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => 'b9f00b59-ca0a-35af-9f1f-35ed1840492e',
+'name' => 'serial_number',
+'timestamp' => '2018-05-23T13:37:57.965Z',
+'value' => '181515206',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'robotic_mower_type',
+)),
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'constraints' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'resource_name' => 'scheduling_wizard_mowing',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'is_supported',
+'unit' => '',
+'value' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'selection_requirements',
+'unit' => '',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'area' => 25,
+'days' => 5,
+'time_slots' => 1,
+)),
+1 =>
+stdClass::__set_state(array(
+'area' => 50,
+'days' => 5,
+'time_slots' => 1,
+)),
+2 =>
+stdClass::__set_state(array(
+'area' => 75,
+'days' => 5,
+'time_slots' => 1,
+)),
+3 =>
+stdClass::__set_state(array(
+'area' => 100,
+'days' => 5,
+'time_slots' => 1,
+)),
+4 =>
+stdClass::__set_state(array(
+'area' => 125,
+'days' => 5,
+'time_slots' => 1,
+)),
+5 =>
+stdClass::__set_state(array(
+'area' => 150,
+'days' => 5,
+'time_slots' => 1,
+)),
+6 =>
+stdClass::__set_state(array(
+'area' => 175,
+'days' => 5,
+'time_slots' => 1,
+)),
+7 =>
+stdClass::__set_state(array(
+'area' => 200,
+'days' => 5,
+'time_slots' => 1,
+)),
+8 =>
+stdClass::__set_state(array(
+'area' => 225,
+'days' => 5,
+'time_slots' => 1,
+)),
+9 =>
+stdClass::__set_state(array(
+'area' => 250,
+'days' => 5,
+'time_slots' => 1,
+)),
+10 =>
+stdClass::__set_state(array(
+'area' => 275,
+'days' => 5,
+'time_slots' => 2,
+)),
+11 =>
+stdClass::__set_state(array(
+'area' => 300,
+'days' => 5,
+'time_slots' => 2,
+)),
+12 =>
+stdClass::__set_state(array(
+'area' => 325,
+'days' => 5,
+'time_slots' => 2,
+)),
+13 =>
+stdClass::__set_state(array(
+'area' => 350,
+'days' => 5,
+'time_slots' => 2,
+)),
+14 =>
+stdClass::__set_state(array(
+'area' => 375,
+'days' => 5,
+'time_slots' => 2,
+)),
+15 =>
+stdClass::__set_state(array(
+'area' => 400,
+'days' => 5,
+'time_slots' => 2,
+)),
+16 =>
+stdClass::__set_state(array(
+'area' => 425,
+'days' => 5,
+'time_slots' => 2,
+)),
+17 =>
+stdClass::__set_state(array(
+'area' => 450,
+'days' => 5,
+'time_slots' => 2,
+)),
+18 =>
+stdClass::__set_state(array(
+'area' => 475,
+'days' => 5,
+'time_slots' => 2,
+)),
+19 =>
+stdClass::__set_state(array(
+'area' => 500,
+'days' => 5,
+'time_slots' => 2,
+)),
+20 =>
+stdClass::__set_state(array(
+'area' => 525,
+'days' => 5,
+'time_slots' => 3,
+)),
+21 =>
+stdClass::__set_state(array(
+'area' => 550,
+'days' => 5,
+'time_slots' => 3,
+)),
+22 =>
+stdClass::__set_state(array(
+'area' => 575,
+'days' => 5,
+'time_slots' => 3,
+)),
+23 =>
+stdClass::__set_state(array(
+'area' => 600,
+'days' => 5,
+'time_slots' => 3,
+)),
+24 =>
+stdClass::__set_state(array(
+'area' => 625,
+'days' => 5,
+'time_slots' => 3,
+)),
+25 =>
+stdClass::__set_state(array(
+'area' => 650,
+'days' => 5,
+'time_slots' => 3,
+)),
+26 =>
+stdClass::__set_state(array(
+'area' => 675,
+'days' => 5,
+'time_slots' => 3,
+)),
+27 =>
+stdClass::__set_state(array(
+'area' => 700,
+'days' => 5,
+'time_slots' => 3,
+)),
+28 =>
+stdClass::__set_state(array(
+'area' => 725,
+'days' => 6,
+'time_slots' => 3,
+)),
+29 =>
+stdClass::__set_state(array(
+'area' => 750,
+'days' => 6,
+'time_slots' => 3,
+)),
+30 =>
+stdClass::__set_state(array(
+'area' => 775,
+'days' => 6,
+'time_slots' => 3,
+)),
+31 =>
+stdClass::__set_state(array(
+'area' => 800,
+'days' => 6,
+'time_slots' => 3,
+)),
+32 =>
+stdClass::__set_state(array(
+'area' => 825,
+'days' => 6,
+'time_slots' => 3,
+)),
+33 =>
+stdClass::__set_state(array(
+'area' => 850,
+'days' => 6,
+'time_slots' => 3,
+)),
+34 =>
+stdClass::__set_state(array(
+'area' => 875,
+'days' => 6,
+'time_slots' => 3,
+)),
+35 =>
+stdClass::__set_state(array(
+'area' => 900,
+'days' => 6,
+'time_slots' => 3,
+)),
+36 =>
+stdClass::__set_state(array(
+'area' => 925,
+'days' => 6,
+'time_slots' => 3,
+)),
+37 =>
+stdClass::__set_state(array(
+'area' => 950,
+'days' => 6,
+'time_slots' => 3,
+)),
+38 =>
+stdClass::__set_state(array(
+'area' => 975,
+'days' => 6,
+'time_slots' => 3,
+)),
+39 =>
+stdClass::__set_state(array(
+'area' => 1000,
+'days' => 6,
+'time_slots' => 3,
+)),
+),
+)),
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'resource_name' => 'scheduled_events',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'is_supported',
+'unit' => '',
+'value' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'events_week_max',
+'unit' => '',
+'value' => 14,
+)),
+2 =>
+stdClass::__set_state(array(
+'name' => 'events_day_max',
+'unit' => '',
+'value' => 2,
+)),
+3 =>
+stdClass::__set_state(array(
+'name' => 'events_week_min',
+'unit' => '',
+'value' => 1,
+)),
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'resource_name' => 'starting_points',
+'values' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'supported_loop_wires',
+'unit' => '',
+'value' =>
+array (
+0 => 'guide_1',
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'name' => 'count',
+'unit' => '',
+'value' => 3,
+)),
+),
+)),
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b64f79fb-049d-480e-a966-407752e7ebf6',
+'start_at' => '11:00',
+'end_at' => '17:00',
+'recurrence' =>
+stdClass::__set_state(array(
+'type' => 'weekly',
+'weekdays' =>
+array (
+0 => 'monday',
+1 => 'tuesday',
+2 => 'wednesday',
+3 => 'thursday',
+4 => 'friday',
+5 => 'saturday',
+6 => 'sunday',
+),
+)),
+)),
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'starting_points',
+'id' => 'd15f3dd6-a295-4060-9d48-1ade41aecbe2',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 300,
+'probability_in_percent' => 10,
+'enabled' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 35,
+'probability_in_percent' => 40,
+'enabled' => true,
+)),
+2 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 0,
+'probability_in_percent' => 0,
+'enabled' => false,
+)),
+),
+)),
+),
+'status_report_history' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-21T03:19:00.361Z',
+)),
+1 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-20T20:33:53.162Z',
+)),
+2 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-19T05:51:25.270Z',
+)),
+3 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-18T23:36:24.952Z',
+)),
+4 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-18T18:51:26.848Z',
+)),
+5 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-17T17:07:48.837Z',
+)),
+6 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-15T18:12:38.304Z',
+)),
+7 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-15T08:21:32.981Z',
+)),
+8 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-14T03:16:32.913Z',
+)),
+9 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-13T22:32:25.109Z',
+)),
+10 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-13T18:51:32.933Z',
+)),
+11 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2019-04-08T00:07:44.228Z',
+)),
+12 =>
+stdClass::__set_state(array(
+'level' => 'important',
+'message' => 'STATUS_SYSTEM_NO_NTP',
+'raw_message' => 'STATUS_SYSTEM_NO_NTP',
+'source' => 'gateway',
+'timestamp' => '2019-04-05T16:06:15.245Z',
+)),
+13 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-12-01T12:43:17.850Z',
+)),
+14 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-12-01T09:27:34.671Z',
+)),
+15 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-22T22:43:29.046Z',
+)),
+16 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-11-22T19:55:05.062Z',
+)),
+17 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-20T18:43:31.609Z',
+)),
+18 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'STATUS_DEVICE_ALIVE',
+'raw_message' => 'STATUS_DEVICE_ALIVE',
+'source' => 'gateway',
+'timestamp' => '2018-11-20T12:28:25.824Z',
+)),
+19 =>
+stdClass::__set_state(array(
+'level' => 'warning',
+'message' => 'STATUS_DEVICE_UNREACHABLE',
+'raw_message' => 'STATUS_DEVICE_UNREACHABLE',
+'source' => 'gateway',
+'timestamp' => '2018-11-19T17:43:32.745Z',
+)),
+20 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-07T13:03:20.590Z',
+)),
+21 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-02T12:33:38.106Z',
+)),
+22 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-01T13:52:07.829Z',
+)),
+23 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-11-01T13:50:07.759Z',
+)),
+24 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-30T13:32:56.842Z',
+)),
+25 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-22T21:54:44.060Z',
+)),
+26 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-21T21:37:43.404Z',
+)),
+27 =>
+stdClass::__set_state(array(
+'level' => 'error',
+'message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'raw_message' => 'STATUS_PARTNER_INFORMATION_FAILED_TO_SEND_TO_PARTNER',
+'source' => 'gateway',
+'timestamp' => '2018-10-21T21:37:43.381Z',
+)),
+28 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'UPLOAD_COMPLETE',
+'raw_message' => 'UPLOAD_COMPLETE',
+'source' => 'gateway',
+'timestamp' => '2018-10-12T00:08:40.479Z',
+)),
+29 =>
+stdClass::__set_state(array(
+'level' => 'info',
+'message' => 'UPLOADING',
+'raw_message' => 'UPLOADING',
+'source' => 'gateway',
+'timestamp' => '2018-10-11T23:44:55.890Z',
+)),
+),
+'zones' =>
+array (
+),
+))
+================ VAR_EXPORT END ================

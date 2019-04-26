@@ -1,0 +1,565 @@
+================ VAR_EXPORT START ================
+2019-04-26 10:33:57	214922	26037	info	EXE19001620 [v0.22]
+
+gardena::__set_state(array(
+'user_id' => '3f0cdd35-ebb8-4984-a06c-26024c2000bd',
+'token' => '5c88549f-0273-4739-a93c-787d448d4f12',
+'locations' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'fd574159-d8c6-4b60-b802-49ea4b2860d8',
+'name' => 'My Garden',
+'authorized_at' => '2018-05-21T13:06:59.557Z',
+'authorized_user_ids' =>
+array (
+),
+'device_flashing' =>
+stdClass::__set_state(array(
+'device_id' => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+'timestamp' => '2019-04-26T08:33:30.508Z',
+)),
+'devices' =>
+array (
+0 => '0ea5eb61-bbf8-4bab-9f1d-c8703007dfd4',
+1 => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+),
+'zones' =>
+array (
+),
+)),
+),
+'devices' =>
+array (
+'fd574159-d8c6-4b60-b802-49ea4b2860d8' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => '0ea5eb61-bbf8-4bab-9f1d-c8703007dfd4',
+'name' => 'Gateway',
+'description' => 'Gateway device',
+'category' => 'gateway',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-32212aec0665',
+'name' => 'device_info',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000000',
+'name' => 'manufacturer',
+'value' => 'Seluxit',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000001',
+'name' => 'product',
+'value' => '1-GATEWAY',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000002',
+'name' => 'serial_number',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+3 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000003',
+'name' => 'sgtin',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+4 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000004',
+'name' => 'connection_status',
+'value' => 'unknown',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+5 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000005',
+'name' => 'ethernet_status',
+'value' =>
+stdClass::__set_state(array(
+'mac' => '94:BB:AE:05:F5:F1',
+'ip' =>
+stdClass::__set_state(array(
+)),
+'isconnected' => 'false',
+)),
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+6 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000006',
+'name' => 'wifi_status',
+'value' =>
+stdClass::__set_state(array(
+'ssid' => 'dsnet',
+'mac' => '00:1D:43:00:7B:E5',
+'ip' => '192.168.178.56',
+'isconnected' => 'true',
+'signal' => '70%',
+)),
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+7 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000007',
+'name' => 'version',
+'value' => '2.2.1',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+8 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000008',
+'name' => 'category',
+'value' => 'gateway',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+9 =>
+stdClass::__set_state(array(
+'id' => 'f9667bc2-b5e2-11e5-b6a5-100000000009',
+'name' => 'last_time_online',
+'value' => 'N/A',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'device_info',
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-32212aec0665',
+'name' => 'gateway',
+'properties' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000000',
+'name' => 'ip_address',
+'value' => '192.168.178.56',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000001',
+'name' => 'time_zone',
+'value' => ' Africa/Ceuta (CEST, +0200)',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+2 =>
+stdClass::__set_state(array(
+'id' => 'b74cbb14-b5e4-11e5-86c5-100000000002',
+'name' => 'homekit_setup_payload',
+'value' => 'X-HM://002M9TMO9TW7Q',
+'writeable' => false,
+'supported_values' =>
+array (
+),
+)),
+),
+'type' => 'gateway',
+)),
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-05-21T13:07:00.011Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-05-21T13:07:00.011Z',
+)),
+'constraints' =>
+array (
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+),
+'status_report_history' =>
+array (
+),
+'zones' =>
+array (
+),
+)),
+1 =>
+stdClass::__set_state(array(
+'id' => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+'name' => 'Robby',
+'category' => 'mower',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'constraints' =>
+array (
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b64f79fb-049d-480e-a966-407752e7ebf6',
+'start_at' => '11:00',
+'end_at' => '17:00',
+'recurrence' =>
+stdClass::__set_state(array(
+'type' => 'weekly',
+'weekdays' =>
+array (
+0 => 'monday',
+1 => 'tuesday',
+2 => 'wednesday',
+3 => 'thursday',
+4 => 'friday',
+5 => 'saturday',
+6 => 'sunday',
+),
+)),
+)),
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'starting_points',
+'id' => 'd15f3dd6-a295-4060-9d48-1ade41aecbe2',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 300,
+'probability_in_percent' => 10,
+'enabled' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 35,
+'probability_in_percent' => 40,
+'enabled' => true,
+)),
+2 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 0,
+'probability_in_percent' => 0,
+'enabled' => false,
+)),
+),
+)),
+),
+'status_report_history' =>
+array (
+),
+'zones' =>
+array (
+),
+)),
+),
+),
+'CMD_MOWER_PARK_UNTIL_NEXT_TIMER' =>
+array (
+'name' => 'park_until_next_timer',
+),
+'CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE' =>
+array (
+'name' => 'park_until_further_notice',
+),
+'CMD_MOWER_START_RESUME_SCHEDULE' =>
+array (
+'name' => 'start_resume_schedule',
+),
+'CMD_MOWER_START_24HOURS' =>
+array (
+'name' => 'start_override_timer',
+'parameters' =>
+array (
+'duration' => 1440,
+),
+),
+'CMD_MOWER_START_3DAYS' =>
+array (
+'name' => 'start_override_timer',
+'parameters' =>
+array (
+'duration' => 4320,
+),
+),
+'CMD_SENSOR_REFRESH_TEMPERATURE' =>
+array (
+'name' => 'measure_ambient_temperature',
+),
+'CMD_SENSOR_REFRESH_LIGHT' =>
+array (
+'name' => 'measure_light',
+),
+'CMD_SENSOR_REFRESH_HUMIDITY' =>
+array (
+'name' => 'measure_humidity',
+),
+'CMD_WATERINGCOMPUTER_START_30MIN' =>
+array (
+'name' => 'manual_override',
+'parameters' =>
+array (
+'duration' => 30,
+),
+),
+'CMD_WATERINGCOMPUTER_STOP' =>
+array (
+'name' => 'cancel_override',
+),
+'status_map' =>
+array (
+'paused' => 'Pausiert',
+'ok_cutting' => 'Mähen',
+'ok_searching' => 'Suche Ladestation',
+'ok_charging' => 'Lädt',
+'ok_leaving' => 'Mähen',
+'wait_updating' => 'Wird aktualisiert ...',
+'wait_power_up' => 'Wird eingeschaltet ...',
+'parked_timer' => 'Geparkt nach Zeitplan',
+'parked_park_selected' => 'Geparkt',
+'off_disabled' => 'Der Mäher ist ausgeschaltet',
+'off_hatch_open' => 'Deaktiviert. Abdeckung ist offen oder PIN-Code erforderlich',
+'unknown' => 'Unbekannter Status',
+'error' => 'Fehler',
+'error_at_power_up' => 'Neustart ...',
+'off_hatch_closed' => 'Deaktiviert. Manueller Start erforderlich',
+'ok_cutting_timer_overridden' => 'Manuelles Mähen',
+'parked_autotimer' => 'Geparkt durch SensorControl',
+'parked_daily_limit_reached' => 'Abgeschlossen',
+),
+'status_map_int' =>
+array (
+'paused' => 0,
+'ok_cutting' => 10,
+'ok_searching' => 9,
+'ok_charging' => 5,
+'ok_leaving' => 10,
+'wait_updating' => 19,
+'wait_power_up' => 19,
+'parked_timer' => 2,
+'parked_park_selected' => 2,
+'off_disabled' => 0,
+'off_hatch_open' => 0,
+'unknown' => 20,
+'error' => 20,
+'error_at_power_up' => 20,
+'off_hatch_closed' => 0,
+'ok_cutting_timer_overridden' => 10,
+'parked_autotimer' => 2,
+'parked_daily_limit_reached' => 2,
+),
+'error_map' =>
+array (
+'no_message' => 'Kein Fehler',
+'outside_working_area' => 'Außerhalb des Arbeitsbereichs',
+'no_loop_signal' => 'Kein Schleifensignal',
+'wrong_loop_signal' => 'Falsches Schleifensignal',
+'loop_sensor_problem_front' => 'Problem Schleifensensor, vorne',
+'loop_sensor_problem_rear' => 'Problem Schleifensensor, hinten',
+'trapped' => 'Eingeschlossen',
+'upside_down' => 'Steht auf dem Kopf',
+'low_battery' => 'Niedriger Batteriestand',
+'empty_battery' => 'empty_battery',
+'no_drive' => 'no_drive',
+'lifted' => 'Angehoben',
+'stuck_in_charging_station' => 'Eingeklemmt in Ladestation',
+'charging_station_blocked' => 'Ladestation blockiert',
+'collision_sensor_problem_rear' => 'Problem Stoßsensor hinten',
+'collision_sensor_problem_front' => 'Problem Stoßsensor vorne',
+'wheel_motor_blocked_right' => 'Radmotor rechts blockiert',
+'wheel_motor_blocked_left' => 'Radmotor links blockiert',
+'wheel_drive_problem_right' => 'Problem Antrieb, rechts',
+'wheel_drive_problem_left' => 'Problem Antrieb, links',
+'cutting_system_blocked' => 'Schneidsystem blockiert',
+'invalid_sub_device_combination' => 'Fehlerhafte Verbindung',
+'settings_restored' => 'Standardeinstellungen',
+'electronic_problem' => 'Elektronisches Problem',
+'charging_system_problem' => 'Problem Ladesystem',
+'tilt_sensor_problem' => 'Kippsensorproblem',
+'wheel_motor_overloaded_right' => 'Rechter Radmotor überlastet',
+'wheel_motor_overloaded_left' => 'Linker Radmotor überlastet',
+'charging_current_too_high' => 'Ladestrom zu hoch',
+'temporary_problem' => 'Vorübergehendes Problem',
+'guide_1_not_found' => 'SK 1 nicht gefunden',
+'guide_2_not_found' => 'SK 2 nicht gefunden',
+'guide_3_not_found' => 'SK 3 nicht gefunden',
+'difficult_finding_home' => 'Problem die Ladestation zu finden',
+'guide_calibration_accomplished' => 'Kalibration des Suchkabels beendet',
+'guide_calibration_failed' => 'Kalibration des Suchkabels fehlgeschlagen',
+'temporary_battery_problem' => 'Kurzzeitiges Batterieproblem',
+'battery_problem' => 'Batterieproblem',
+'alarm_mower_switched_off' => 'Alarm! Mäher ausgeschalten',
+'alarm_mower_stopped' => 'Alarm! Mäher gestoppt',
+'alarm_mower_lifted' => 'Alarm! Mäher angehoben',
+'alarm_mower_tilted' => 'Alarm! Mäher gekippt',
+'connection_changed' => 'Verbindung geändert',
+'connection_not_changed' => 'Verbindung nicht geändert',
+'com_board_not_available' => 'COM board nicht verfügbar',
+'slipped' => 'Rutscht',
+),
+))
+================ VAR_EXPORT END ================
+mower debug
+================ VAR_EXPORT START ================
+stdClass::__set_state(array(
+'id' => '8e6bcff6-ff27-497d-8bad-09e0e26babca',
+'name' => 'Robby',
+'category' => 'mower',
+'configuration_synchronized' => true,
+'abilities' =>
+array (
+),
+'configuration_synchronized_v2' =>
+stdClass::__set_state(array(
+'value' => true,
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'configuration_update' =>
+stdClass::__set_state(array(
+'status' => 'synchronized',
+'timestamp' => '2018-10-24T08:37:47.218Z',
+)),
+'constraints' =>
+array (
+),
+'device_state' => 'ok',
+'property_constraints' =>
+array (
+),
+'scheduled_events' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'id' => 'b64f79fb-049d-480e-a966-407752e7ebf6',
+'start_at' => '11:00',
+'end_at' => '17:00',
+'recurrence' =>
+stdClass::__set_state(array(
+'type' => 'weekly',
+'weekdays' =>
+array (
+0 => 'monday',
+1 => 'tuesday',
+2 => 'wednesday',
+3 => 'thursday',
+4 => 'friday',
+5 => 'saturday',
+6 => 'sunday',
+),
+)),
+)),
+),
+'scheduling_wizard_mowing' => NULL,
+'settings' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'name' => 'starting_points',
+'id' => 'd15f3dd6-a295-4060-9d48-1ade41aecbe2',
+'value' =>
+array (
+0 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 300,
+'probability_in_percent' => 10,
+'enabled' => true,
+)),
+1 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 35,
+'probability_in_percent' => 40,
+'enabled' => true,
+)),
+2 =>
+stdClass::__set_state(array(
+'follow' => 'guide_1',
+'distance_in_meters' => 0,
+'probability_in_percent' => 0,
+'enabled' => false,
+)),
+),
+)),
+),
+'status_report_history' =>
+array (
+),
+'zones' =>
+array (
+),
+))
+================ VAR_EXPORT END ================
