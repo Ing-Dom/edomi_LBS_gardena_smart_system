@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno V0.23			]
+[name				= Gardena Smart Sileno LBS 1620 V0.30	]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -10,8 +10,9 @@
 [e#7				= start				#init=0				]
 [e#8				= start_24h			#init=0				]
 [e#9				= start_3d			#init=0				]
-[e#10				= Loglevel 			#init=8				]
-[e#11				= CycleTime 		#init=20			]
+[e#10				= start_xh			#init=0				]
+[e#11				= Loglevel 			#init=8				]
+[e#12				= CycleTime 		#init=20			]
 
 
 
@@ -40,9 +41,10 @@
 [v#12 = 0]
 [v#13 = 0]
 [v#14 = 0]
+[v#15 = 0]
 
 
-[v#100				= 0.23 ]
+[v#100				= 0.30 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -53,8 +55,8 @@
 This LBS connects to the Gardena cloud and can communicate with your Gardena Smart Sileno (R100LiC) auto mower.
 It is possible to get above information and send commands.
 Sending commands is only trigged on a rising edge 0->1 of the respective Input.
-The LBS will update the information from gardena every E11 seconds. When a command is is triggered, the LBS will be updated in 0-500ms after the command.
-After the command was issued, the cycletime will be set to 1 second for 20 times.
+The LBS will update the information from gardena every E11 seconds. When a command is is triggered, the LBS will do extra requests:
+After the command was issued, the cycletime will be set to 3 second for 2 times.
 
 Inputs:
 E1 - Autostart:		Don't change or connect!
@@ -66,8 +68,9 @@ E6 - park2:			Park the mower until further notice
 E7 - start:			Start the mower (resume schedule)
 E8 - start_24h:		Start the mower for 24 hours (regardless of schedule)
 E9 - start_3d:		Start the mower for 3 days (regardless of schedule)
-E10- LogLevel:		Set the PHP-LogLevel (default: 8)
-E11- CycleTime:		Poll the information from gardena cloud every n seconds (default: 20)
+E10 - start_xh:		Start the mower for the x hours (x = value of E10)
+E11- LogLevel:		Set the PHP-LogLevel (default: 8)
+E12- CycleTime:		Poll the information from gardena cloud every n seconds (default: 20)
 
 Outputs:
 A1 - mower_name:	The name of the mower as configured in the gardena app
@@ -90,6 +93,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.30	2020-08-06	SirSydom		fixed overload, added support for changed api reagrding time period when overridung timer, fixed date format issues
 V0.23	2019-04-26	SirSydom		added check for missing ability data
 V0.22	2019-04-25	SirSydom		find problems with latest edomi or gardena cloud
 V0.21	2019-04-08	SirSydom		extended logging to find problems with latest edomi or gardena cloud
@@ -102,7 +106,7 @@ V0.15	2018-05-25	SirSydom		added translation for status and error messages
 V0.14	2018-05-25	SirSydom
 
 Open Issues:
-Timezone-Handling
+Error handling (when no valid json is returned)
 
 Author:
 SirSydom - com@sirsydom.de
@@ -132,7 +136,7 @@ function LB_LBSID($id)
 {
 	if($E=getLogicEingangDataAll($id))
 	{
-		setLogicElementVar($id, 103, $E[10]['value']); //set loglevel to #VAR 103
+		setLogicElementVar($id, 103, $E[11]['value']); //set loglevel to #VAR 103
 		if(getLogicElementVar($id,1)!=1)
 		{
 			setLogicElementVar($id,1,1);                      //setzt V1=1, um einen mehrfachen Start des EXEC-Scripts zu verhindern
@@ -168,6 +172,12 @@ function LB_LBSID($id)
 			setLogicElementVar($id, 5, 5);
 		}		
 		setLogicElementVar($id, 14, $E[9]['value']);
+		
+		if($E[10]['value'] == 1 && $E[10]['refresh'] == 1 && getLogicElementVar($id,15) != $E[10]['value'])	// only act on rising edge
+		{
+			setLogicElementVar($id, 5, 6);
+		}		
+		setLogicElementVar($id, 15, $E[10]['value']);
 
 
 		
@@ -187,7 +197,7 @@ set_time_limit(0);                                       //Wichtig! Script soll 
 sql_connect();
 logging($id, "Gardena Smart System Daemon started", null, 5);
 $E = logic_getInputs($id);
-$cyclecounter = $E[11]['value'] * 2; // start with max value, so a cycle is immidiatelly triggerd
+$cyclecounter = $E[12]['value'] * 2; // start with max value, so a cycle is immidiatelly triggerd
 $reduce_cycletime = 0;
 $A18 = null;
 while (getSysInfo(1)>=1)
@@ -197,7 +207,7 @@ while (getSysInfo(1)>=1)
 	$cmd = getLogicElementVar($id,5);	
 	setLogicElementVar($id, 5, 0);
 	
-	if(($cyclecounter < ($E[11]['value'])*2) && $cmd == 0)
+	if(($cyclecounter < ($E[12]['value'])*2) && $cmd == 0)
 	{
 		logging($id, "wait 500ms", null, 8);
 		usleep(500000);
@@ -209,7 +219,7 @@ while (getSysInfo(1)>=1)
 		{
 			logging($id, "reduced cycltime active", null, 7);
 			$reduce_cycletime--;
-			$cyclecounter = $E[11]['value'] * 2 - 2;
+			$cyclecounter = $E[12]['value'] * 2 - 2;
 		}
 		else
 		{
@@ -246,7 +256,7 @@ while (getSysInfo(1)>=1)
 			if($mower == NULL)
 			{
 				logging($id, "mower is NULL", null, 1);
-				$cyclecounter = $E[11]['value'] * 2;
+				//$cyclecounter = $E[12]['value'] * 2; // don't do this, it leads to a blocked account
 			}
 			else
 			{
@@ -272,13 +282,17 @@ while (getSysInfo(1)>=1)
 						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_3DAYS);
 						logging($id, "Send command CMD_MOWER_START_3DAYS", null, 5);
 						break;
+					case 6:	
+						$gardena -> sendCommand($mower, array("name" => "start_override_timer", "parameters" => array("duration" => getLogicElementVar($id,15))));
+						logging($id, "Send command start_override_timer ".getLogicElementVar($id,15)."h", null, 5);
+						break;
 				}
 				
 				if($cmd > 0)
 				{
 					logging($id, "reduce cycltime after command", null, 7);
-					$reduce_cycletime = 20; //reduce cyclimetime to 1s for 20times
-					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
+					$reduce_cycletime = 2; //reduce cyclimetime to 3s for 2times
+					$cyclecounter = $E[12]['value'] * 2 - 6; //come back in 3s
 				}
 				
 				if($gardena->CheckDevice($mower))
@@ -311,13 +325,25 @@ while (getSysInfo(1)>=1)
 					logic_setOutput($id,4,$batterylevel);
 					
 					$next_start = $gardena -> getPropertyData($mower, "mower", "timestamp_next_start") -> value;
-					logic_setOutput($id,5,$next_start); //ToDo: Timezone
+					$next_start_numeric = strtotime($next_start);
+					$next_start_display = strftime("%d.%m.%Y %T", $next_start_numeric );
+					if($next_start_numeric < time())
+					{
+						logic_setOutput($id,5,"");
+					}
+					else
+					{
+						logic_setOutput($id,5,$next_start_display);
+					}
 					
 					$signal = $gardena -> getPropertyData($mower, "radio", "quality") -> value;
 					logic_setOutput($id,6,$signal);
 					
 					$last_time_online = $gardena -> getPropertyData($mower, "device_info", "last_time_online") -> value;
-					logic_setOutput($id,7,$last_time_online); //ToDo: Timezone
+					$last_time_online_numeric = strtotime($last_time_online);
+					$last_time_online_display = strftime("%d.%m.%Y %T", $last_time_online_numeric);
+					
+					logic_setOutput($id,7,$last_time_online_display);
 					
 					$error = $gardena -> getPropertyData($mower, "mower", "error") -> value;
 					logic_setOutput($id,8,$gardena->error_map[$error]);
@@ -341,7 +367,7 @@ while (getSysInfo(1)>=1)
 					logging2($id, "gardena debug", $gardena, 7);
 					logging2($id, "mower debug", $mower, 7);
 					
-					$cyclecounter = $E[11]['value'] * 2 - 2; //come back in 1s
+					$cyclecounter = $E[12]['value'] * 2 - 2; //come back in 1s
 				}	
 			}
 			
@@ -432,8 +458,8 @@ class gardena
     var $CMD_MOWER_PARK_UNTIL_NEXT_TIMER = array("name" => "park_until_next_timer");
     var $CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE = array("name" => "park_until_further_notice");
     var $CMD_MOWER_START_RESUME_SCHEDULE = array("name" => "start_resume_schedule");
-    var $CMD_MOWER_START_24HOURS = array("name" => "start_override_timer", "parameters" => array("duration" => 1440));
-    var $CMD_MOWER_START_3DAYS = array("name" => "start_override_timer", "parameters" => array("duration" => 4320));
+    var $CMD_MOWER_START_24HOURS = array("name" => "start_override_timer", "parameters" => array("duration" => 86400));
+    var $CMD_MOWER_START_3DAYS = array("name" => "start_override_timer", "parameters" => array("duration" => 259200));
     
     var $CMD_SENSOR_REFRESH_TEMPERATURE = array("name" => "measure_ambient_temperature");
     var $CMD_SENSOR_REFRESH_LIGHT = array("name" => "measure_light");
