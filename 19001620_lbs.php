@@ -1,5 +1,5 @@
 ###[DEF]###
-[name				= Gardena Smart Sileno LBS 1620 V0.30	]
+[name				= Gardena Smart Sileno LBS 1620 V0.31	]
 
 [e#1	important	= Autostart			#init=1				]
 [e#2	important	= username								]
@@ -44,7 +44,7 @@
 [v#15 = 0]
 
 
-[v#100				= 0.30 ]
+[v#100				= 0.31 ]
 [v#101 				= 19001620 ]
 [v#102 				= Gardena Smart Sileno ]
 [v#103 				= 0 ]
@@ -93,6 +93,7 @@ A18-state_num:		summarized state as integer (for logging/operation history visua
 
 
 Versions:
+V0.31	2021-05-01	SirSydom		extended API debugging (send command)
 V0.30	2020-08-06	SirSydom		fixed overload, added support for changed api reagrding time period when overridung timer, fixed date format issues
 V0.23	2019-04-26	SirSydom		added check for missing ability data
 V0.22	2019-04-25	SirSydom		find problems with latest edomi or gardena cloud
@@ -110,7 +111,7 @@ Error handling (when no valid json is returned)
 
 Author:
 SirSydom - com@sirsydom.de
-Copyright (c) 2018-2019 SirSydom
+Copyright (c) 2018-2021 SirSydom
 
 Github:
 https://github.com/SirSydom/edomi_LBS_gardena_smart_system
@@ -263,28 +264,71 @@ while (getSysInfo(1)>=1)
 				switch($cmd)
 				{
 					case 1:
-						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_PARK_UNTIL_NEXT_TIMER);
-						logging($id, "Send command CMD_MOWER_PARK_UNTIL_NEXT_TIMER", null, 5);
+						$retval = $gardena -> sendCommand($mower, $gardena -> CMD_MOWER_PARK_UNTIL_NEXT_TIMER);
+						if($retval === true)
+						{
+							logging($id, "Send command CMD_MOWER_PARK_UNTIL_NEXT_TIMER successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command CMD_MOWER_PARK_UNTIL_NEXT_TIMER Error: ", $retval, 3);
+						}
 						break;
 					case 2:
-						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE);
-						logging($id, "Send command CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE", null, 5);
+						$retval = $gardena -> sendCommand($mower, $gardena -> CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE);
+						if($retval === true)
+						{
+							logging($id, "Send command CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command CMD_MOWER_PARK_UNTIL_FURTHER_NOTICE Error: ", $retval, 3);
+						}
 						break;
 					case 3:
-						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_RESUME_SCHEDULE);
-						logging($id, "Send command CMD_MOWER_START_RESUME_SCHEDULE", null, 5);
+						$retval = $gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_RESUME_SCHEDULE);
+						if($retval === true)
+						{
+							logging($id, "Send command CMD_MOWER_START_RESUME_SCHEDULE successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command CMD_MOWER_START_RESUME_SCHEDULE Error: ", $retval, 3);
+						}
 						break;
 					case 4:
-						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_24HOURS);
-						logging($id, "Send command CMD_MOWER_START_24HOURS", null, 5);
+						$retval = $gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_24HOURS);
+						if($retval === true)
+						{
+							logging($id, "Send command CMD_MOWER_START_24HOURS successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command CMD_MOWER_START_24HOURS Error: ", $retval, 3);
+						}
 						break;
 					case 5:
-						$gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_3DAYS);
-						logging($id, "Send command CMD_MOWER_START_3DAYS", null, 5);
+						$retval = $gardena -> sendCommand($mower, $gardena -> CMD_MOWER_START_3DAYS);
+						if($retval === true)
+						{
+							logging($id, "Send command CMD_MOWER_START_3DAYS successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command CMD_MOWER_START_3DAYS Error: ", $retval, 3);
+						}
 						break;
 					case 6:	
-						$gardena -> sendCommand($mower, array("name" => "start_override_timer", "parameters" => array("duration" => getLogicElementVar($id,15))));
-						logging($id, "Send command start_override_timer ".getLogicElementVar($id,15)."h", null, 5);
+						$retval = $gardena -> sendCommand($mower, array("name" => "start_override_timer", "parameters" => array("duration" => getLogicElementVar($id,15))));
+						if($retval === true)
+						{
+							logging($id, "Send command START_OVERRIDE_TIMER successfull", null, 5);
+						}
+						else
+						{
+							logging2($id, "Send command START_OVERRIDE_TIMER Error: ", $retval, 3);
+						}
+						logging($id, "Send command START_OVERRIDE_TIMER ".getLogicElementVar($id,15)."h", null, 5);
 						break;
 				}
 				
